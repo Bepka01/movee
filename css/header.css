@@ -136,6 +136,15 @@
   gap: 10px;
   display: none;
 }
+.buttom-border {
+  z-index: -1;
+  width: 280px;
+  height: 60px;
+  position: absolute;
+  border: 3px solid white;
+  top: 270px;
+  left: 20px;
+}
 .burger__line {
   border: 1px solid black;
   height: 1px;
