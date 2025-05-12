@@ -59,7 +59,7 @@
 }
 .header__button {
   border: 0;
-  width: 300px;
+  width: 280px;
   height: 60px;
   background-color: #ff352b;
   margin-bottom: 15px;
@@ -115,8 +115,7 @@
   left: 65%;
   z-index: 0;
 }
-.header__link:hover,
-.header__contacts:hover {
+.header__link:hover {
   color: #ff352b;
   transition: var(--transition);
 }
@@ -172,15 +171,5 @@
     height: 396px;
     top: 170px;
     left: 40%;
-  }
-}
-@media (max-width: 683px) {
-  .header__man {
-    left: 30%;
-  }
-}
-@media (max-width: 360px) {
-  .header__man {
-    left: 15%;
   }
 }
