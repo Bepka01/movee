@@ -167,6 +167,9 @@
     top: 3px;
     left: 20px;
   }
+  .buttom-border {
+    display: none;
+  }
   .header__nav {
     margin-bottom: 16px;
   }
