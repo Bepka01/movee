@@ -31,6 +31,8 @@
   font-weight: 600;
   text-decoration: 1px underline;
   text-underline-offset: 7px;
+}
+.header__contacts p {
   color: var(--color-text);
 }
 .header__movee-service {
@@ -76,6 +78,7 @@
 .header__tools {
   display: flex;
   justify-content: space-between;
+  color: var(--color-text);
 }
 .header__svg {
   display: flex;
