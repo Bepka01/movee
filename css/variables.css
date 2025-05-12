@@ -1,5 +1,5 @@
 :root {
   --backgroung-color: #fed100;
   --color-text: #333333;
-  --transition: all 0.3s ease red;
+  --transition-links: all 0.2s ease-in-out;
 }

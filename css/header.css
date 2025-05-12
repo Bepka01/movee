@@ -19,7 +19,7 @@
 }
 .header__links {
   display: flex;
-  justify-content: space-between;
+
   gap: 45px;
 }
 .header__link {
@@ -122,7 +122,8 @@
 }
 .header__link:hover {
   color: #ff352b;
-  transition: var(--transition);
+  transition: var(--transition-links);
+  cursor: pointer;
 }
 .header__button:hover {
   background-color: var(--color-text);
