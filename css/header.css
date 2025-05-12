@@ -26,6 +26,7 @@
   font-size: 18px;
   color: var(--color-text);
 }
+
 .header__contacts {
   font-size: 24px;
   font-weight: 600;
@@ -36,7 +37,6 @@
   color: var(--color-text);
 }
 .header__movee-service {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,6 +44,7 @@
   align-items: flex-start;
   position: static;
   z-index: 3;
+  position: relative;
 }
 .header__title {
   font-size: 70px;
@@ -104,12 +105,16 @@
   align-items: center;
 }
 .header__man {
+  height: 608px;
+  width: 381px;
   position: absolute;
-  top: 42px;
+  top: 2px;
   left: 45%;
   z-index: 1;
 }
 .header__car {
+  height: 300px;
+  width: 499px;
   position: absolute;
   top: 180px;
   left: 65%;
@@ -147,8 +152,11 @@
   }
   .header__mobile-man {
     display: unset;
-    position: absolute;
-    top: 169px;
+    width: 248px;
+    height: 396px;
+    position: relative;
+    top: 3px;
+    left: 20px;
   }
   .header__nav {
     margin-bottom: 16px;
@@ -170,11 +178,6 @@
   }
   .header__movee-text {
     font-size: 18px;
-  }
-  .header__man {
-    width: 248px;
-    height: 396px;
-    top: 170px;
-    left: 40%;
+    margin-bottom: 0;
   }
 }
