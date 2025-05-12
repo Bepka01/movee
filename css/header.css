@@ -1,6 +1,6 @@
 .header {
   background-color: var(--backgroung-color);
-  height: 650px;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,6 +137,11 @@
   width: 44px;
 }
 @media (max-width: 1050px) {
+  .header__characteristics {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
   .header__burger {
     display: flex;
   }
