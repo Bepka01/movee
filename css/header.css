@@ -19,7 +19,7 @@
 }
 .header__links {
   display: flex;
-
+  z-index: 2;
   gap: 45px;
 }
 .header__link {
