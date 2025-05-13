@@ -1,0 +1,9 @@
+.content {
+  display: grid;
+  grid-template-rows: 342px 717px 691px;
+}
+.content__about,
+.content__price,
+.content__choose-car {
+  border: 1px solid black;
+}
