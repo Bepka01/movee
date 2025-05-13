@@ -105,6 +105,11 @@
   justify-content: center;
   align-items: center;
 }
+.header__ellipse:hover .header__ellipse-small {
+  width: 130px;
+  height: 130px;
+  transition: all 0.3s ease-in-out;
+}
 .header__man {
   height: 608px;
   width: 381px;
