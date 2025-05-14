@@ -1,5 +1,11 @@
 :root {
-  --backgroung-color: #fed100;
+  --background-color: #fed100;
   --color-text: #333333;
   --transition-links: all 0.2s ease-in-out;
+  --color-orange: #ff772b;
+  --color-red: #ff352b;
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --index-bottom: 1;
+  --index-top: 2;
 }

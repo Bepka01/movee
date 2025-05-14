@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Movee</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__nav container">
+    <section class="banner">
+      <header class="header__nav container">
         <div class="header__logo"><h2 class="subtitle__logo">movee</h2></div>
         <div class="header__links">
           <a class="header__link" href="">Цены</a>
@@ -22,9 +29,9 @@
           <div class="burger__line"></div>
         </div>
         <div class="header__contacts">
-          <p>8(029)-999-12-13</p>
+          <a href="">8(029)-999-12-13</a>
         </div>
-      </div>
+      </header>
       <div class="header__movee-service container">
         <div class="header__box">
           <h1 class="header__title">Квартирные<br />переезды</h1>
@@ -35,10 +42,8 @@
             alt=""
           />
         </div>
-        <div class="buttom-border"></div>
-        <button class="header__button">
-          <p>Заказать</p>
-        </button>
+        <button class="header__button">Заказать</button>
+        <div class="button-border"></div>
       </div>
       <div class="header__tools container">
         <div class="header__characteristics">
@@ -226,8 +231,8 @@
           </div>
         </div>
       </div>
-      <img class="header__man" src="../movee/svg-header/man.png" alt="" />
-      <img class="header__car" src="../movee/svg-header/car.png" alt="" />
-    </header>
+      <img class="header__man" src="./svg-header/man.png" alt="" />
+      <img class="header__car" src="./svg-header/car.png" alt="" />
+    </section>
   </body>
 </html>

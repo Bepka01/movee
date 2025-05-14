@@ -1,5 +1,5 @@
-.header {
-  background-color: var(--backgroung-color);
+.banner {
+  background-color: var(--background-color);
   max-height: 650px;
   display: flex;
   flex-direction: column;
@@ -17,10 +17,11 @@
   font-size: 30px;
   font-weight: 600;
   color: var(--color-text);
+  text-transform: uppercase;
 }
 .header__links {
   display: flex;
-  z-index: 2;
+  z-index: var(--index-top);
   gap: 45px;
 }
 .header__link {
@@ -34,8 +35,13 @@
   text-decoration: 1px underline;
   text-underline-offset: 7px;
 }
-.header__contacts p {
+.header__contacts a {
   color: var(--color-text);
+}
+.header__contacts:hover a {
+  color: var(--color-red);
+  transition: var(--transition-links);
+  cursor: pointer;
 }
 .header__movee-service {
   display: flex;
@@ -43,15 +49,14 @@
   justify-content: space-between;
   height: 100%;
   align-items: flex-start;
-  position: static;
-  z-index: 3;
+  z-index: var(--index-top);
   position: relative;
 }
 .header__title {
   font-size: 70px;
   font-weight: 600;
   color: var(--color-text);
-  z-index: 5;
+  z-index: var(--index-top);
 }
 .header__movee-text {
   font-size: 30px;
@@ -63,13 +68,14 @@
   border: 0;
   width: 280px;
   height: 60px;
-  background-color: #ff352b;
+  background-color: var(--color-red);
   margin-bottom: 15px;
-}
-.header__button p {
-  color: white;
+  position: relative;
+  color: var(--color-white);
   font-size: 24px;
+  z-index: var(--index-top);
 }
+
 .header__characteristics {
   display: flex;
   gap: 35px;
@@ -109,14 +115,15 @@
   width: 130px;
   height: 130px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .header__man {
   height: 608px;
   width: 381px;
   position: absolute;
-  top: 2px;
+  top: 14px;
   left: 45%;
-  z-index: 1;
+  z-index: var(--index-bottom);
 }
 .header__car {
   height: 300px;
@@ -124,36 +131,33 @@
   position: absolute;
   top: 180px;
   left: 65%;
-  z-index: 0;
 }
 .header__link:hover {
-  color: #ff352b;
+  color: var(--color-red);
   transition: var(--transition-links);
   cursor: pointer;
 }
 .header__button:hover {
-  background-color: var(--color-text);
+  background-color: var(--color-orange);
+  cursor: pointer;
 }
-.header__button:hover p {
-  color: var(--backgroung-color);
-}
+
 .header__burger {
-  display: flex;
   flex-direction: column;
   gap: 10px;
   display: none;
 }
-.buttom-border {
-  z-index: -1;
+.button-border {
+  z-index: var(--index-bottom);
   width: 280px;
   height: 60px;
   position: absolute;
-  border: 3px solid white;
-  top: 270px;
-  left: 20px;
+  border: 3px solid var(--color-white);
+  top: 280px;
+  left: 25px;
 }
 .burger__line {
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
   height: 1px;
   width: 44px;
 }
@@ -171,10 +175,10 @@
     width: 248px;
     height: 396px;
     position: relative;
-    top: 3px;
+    top: 5px;
     left: 20px;
   }
-  .buttom-border {
+  .button-border {
     display: none;
   }
   .header__nav {
