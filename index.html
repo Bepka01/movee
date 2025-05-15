@@ -4,38 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../movee/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
   <body>
     <section class="content">
       <div class="content__about">
         <h2 class="title__content">Как это происходит?</h2>
-        <div class="content__container-top">
+        <div class="content__container-box">
           <div class="content__box">
-            <div class="number__content-box">01</div>
-            <div class="box__content-text">
-              <h3 class="box__title">Оценка объема предстоящих работ</h3>
-              <p>
+            <div class="content__nubmer-box">
+              <h3 class="number__box">01</h3>
+            </div>
+            <div class="box__about">
+              <h4 class="box-title">Оценка объема предстоящих работ</h4>
+              <p class="box-text">
                 Стоимость переезда зависит от количества комнат, вещей и мебели.
               </p>
             </div>
           </div>
           <div class="content__box">
-            <div class="number__content-box">02</div>
-            <div class="box__content-text">
-              <h3 class="box__title">Упаковка вещей</h3>
+            <div class="content__nubmer-box">
+              <h3 class="number__box">02</h3>
+            </div>
+            <div class="box__about">
+              <h4 class="box-title">Упаковка вещей</h4>
               <p class="box-text">
                 Упаковываем вещи в коробки, подписываем. Габаритное и
                 деликатное, упаковываем отдельно.
               </p>
             </div>
           </div>
-        </div>
-        <div class="content__container-bottom">
           <div class="content__box">
-            <div class="number__content-box">03</div>
-            <div class="box__content-text">
-              <h3 class="box__title">Погрузка и транспортировка вещей</h3>
+            <div class="content__nubmer-box">
+              <h3 class="number__box">03</h3>
+            </div>
+            <div class="box__about">
+              <h4 class="box-title">Погрузка и транспортировка вещей</h4>
               <p class="box-text">
                 В нашем автопарке имеются машины, подходящие для мебели любых
                 габаритов.
@@ -43,9 +54,11 @@
             </div>
           </div>
           <div class="content__box">
-            <div class="number__content-box">04</div>
-            <div class="box__content-text">
-              <h3 class="box__title">Распаковка и расстановка мебели</h3>
+            <div class="content__nubmer-box">
+              <h3 class="number__box">04</h3>
+            </div>
+            <div class="box__about">
+              <h4 class="box-title">Распаковка и расстановка мебели</h4>
               <p class="box-text">
                 Опытные грузчики быстро расставят мебель и уберут мусор от
                 распаковки.
@@ -70,6 +83,9 @@
             <h4 class="box__price-price">70 руб.</h4>
             <div class="button__box">
               <button class="box__button-price">Заказать</button>
+            </div>
+            <div class="box__all-price">
+              <a href="" class="all__price">Все цены</a>
             </div>
           </div>
           <div class="box__price">
@@ -104,11 +120,46 @@
           10 видов автомобилей от 800 кг до 10 тонн
         </p>
         <div class="content__container-choice">
-          <div class="box__car"><p class="box__car-text">Газели</p></div>
-          <div class="box__car"><p class="box__car-text">Каблуки</p></div>
-          <div class="box__car"><p class="box__car-text">Грузовики</p></div>
+          <div class="box__car"><span class="box__car-text">Газели</span></div>
+          <div class="box__car"><span class="box__car-text">Каблуки</span></div>
+          <div class="box__car">
+            <span class="box__car-text">Грузовики</span>
+          </div>
         </div>
         <div class="content__choice-about">
+          <svg
+            class="left__arrow-choice"
+            width="11"
+            height="20"
+            viewBox="0 0 11 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.75 17.75L2 9.875L8.75 2"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="right__arrow-choice"
+            width="11"
+            height="20"
+            viewBox="0 0 11 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.75 17.75L2 9.875L8.75 2"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
           <div class="content__services-choice">
             <h3 class="car__services-name">Газель 3 метра</h3>
             <div class="box__services-box">
@@ -118,6 +169,16 @@
                 <li>Объём 16м</li>
                 <li>Грузоподъемность 1,5т</li>
               </ol>
+            </div>
+            <div class="mobile__choice">
+              <h4 class="title__mobile-choice">Газель 3 метра / 1,5 тонны</h4>
+              <div class="circle__choice">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
             </div>
             <button class="box__services-button"><p>Заказать</p></button>
           </div>
