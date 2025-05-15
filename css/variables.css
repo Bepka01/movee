@@ -1,0 +1,7 @@
+:root {
+  --color-gold: #fed100;
+  --color-black: #333333;
+  --color-gray: #ebebeb;
+  --transition-active: all 0.3s ease;
+  --color-white: #ffffff;
+}
