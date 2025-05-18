@@ -6,6 +6,6 @@
   --color-red: #ff352b;
   --color-white: #ffffff;
   --color-black: #333333;
-  --index-bottom: 1;
-  --index-top: 2;
+  --z-bottom: 1;
+  --z-top: 2;
 }
