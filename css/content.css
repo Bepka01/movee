@@ -21,7 +21,6 @@
 }
 .content__about {
   width: 100%;
-
   margin: 0 auto;
 }
 .content__container-box {
@@ -204,6 +203,14 @@
 .content__choice-car {
   position: relative;
 }
+.box__price:hover {
+  border: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+}
+.box__car:hover {
+  border: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+}
 @media (max-width: 950px) {
   .content {
     padding: 5px 0;
@@ -291,6 +298,17 @@
   .box-text {
     display: none;
   }
+  .circle:hover {
+    height: 13px;
+    width: 13px;
+    background-color: var();
+  }
+  .box__price:hover,
+  .box__car:hover {
+    border: none;
+    transition: none;
+  }
+
   .box__about {
     width: 100%;
     display: flex;
@@ -308,7 +326,7 @@
   .box__price {
     border: 0;
   }
-  .box__all-price {
+  .box__ .box__all-price {
     display: flex;
   }
   .all__price {
