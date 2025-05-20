@@ -161,6 +161,9 @@
   height: 1px;
   width: 44px;
 }
+.header__button:hover + .button-border {
+  background-color: var(--color-white);
+}
 @media (max-width: 1050px) {
   .header__characteristics {
     display: none;
