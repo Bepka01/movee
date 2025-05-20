@@ -146,6 +146,8 @@
   flex-direction: column;
   gap: 10px;
   display: none;
+  background-color: transparent;
+  border: none;
 }
 .button-border {
   z-index: var(--z-bottom);
