@@ -85,6 +85,7 @@
   color: var(--color-white);
   box-shadow: 1px 1px 11px 5px var(--color-gold);
   transition: var(--transition-active);
+  cursor: pointer;
 }
 
 .title__box {
@@ -135,6 +136,8 @@
   height: 50px;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
 }
 .box__car-text {
   font-size: 20px;
@@ -188,6 +191,7 @@
   height: 50px;
   background-color: var(--color-gold);
   border: 0;
+  cursor: pointer;
 }
 .img__car {
   height: 453px;
