@@ -308,11 +308,7 @@
   .box-text {
     display: none;
   }
-  .circle:hover {
-    height: 13px;
-    width: 13px;
-    background-color: var();
-  }
+
   .box__price:hover,
   .box__car:hover {
     border: none;
@@ -382,6 +378,10 @@
     width: 10px;
     border-radius: 50%;
     background-color: var(--color-black);
+  }
+  .circle:hover {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
   }
   .img__car {
     height: 227px;
