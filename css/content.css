@@ -155,6 +155,7 @@
 .right__arrow-choice {
   position: absolute;
   top: 64%;
+  cursor: pointer;
 }
 .left__arrow-choice {
   left: 0px;
