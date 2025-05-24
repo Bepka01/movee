@@ -172,6 +172,10 @@
   }
 }
 @media (max-width: 810px) {
+  .banner {
+    max-height: unset;
+  }
+
   .header__burger {
     display: flex;
   }
