@@ -307,6 +307,7 @@
   }
   .container__box {
     grid-template-rows: 535px;
+    padding: 15px;
   }
 }
 @media (max-width: 520px) {
@@ -335,7 +336,7 @@
   }
 
   .box__price {
-    border: 0;
+    border: none;
   }
   .box__ .box__all-price {
     display: flex;
