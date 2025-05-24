@@ -72,8 +72,18 @@
   color: var(--color-white);
   transition: var(--transition-active);
 }
+.box__feedback {
+  padding: 10px;
+}
 
-@media (max-width: 935px) {
+@media (max-width: 1000px) {
+  .reviews {
+    padding: 20px 0px;
+  }
+  .title__reviews {
+    margin-bottom: 30px;
+  }
+
   .title__reviews {
     font-size: 20px;
   }
@@ -85,5 +95,10 @@
   }
   .box__feedback {
     width: 320px;
+  }
+}
+@media (max-width: 470px) {
+  .box__feedback {
+    width: 100vw;
   }
 }
