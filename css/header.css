@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow-x: hidden;
+
+  overflow: hidden;
 }
 .header__nav,
 .header__links,
@@ -174,9 +175,6 @@
 @media (max-width: 810px) {
   .header__burger {
     display: flex;
-  }
-  .banner {
-    overflow-y: hidden;
   }
 
   .header__mobile-man {
