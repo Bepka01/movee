@@ -1,0 +1,128 @@
+.title__price {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.subtitle__price {
+  font-size: 24px;
+  margin-bottom: 65px;
+}
+.title__price,
+.subtitle__price {
+  text-align: center;
+  font-weight: 600;
+}
+.wrapper__container-price {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 421px));
+  grid-template-rows: 579px;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.box__price {
+  border: 1px solid var(--color-gray);
+  min-height: 525px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title__box {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.about__price {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.total__price {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.box__btn {
+  display: flex;
+  justify-content: center;
+}
+.btn__price {
+  background-color: var(--background-color);
+  padding: 12px 75px;
+  font-size: 20px;
+  border: none;
+}
+.box__price:hover {
+  border: 1px solid var(--background-color);
+  transition: var(--transition-links);
+}
+.btn__price:hover {
+  color: var(--color-white);
+  box-shadow: 0 0 30px var(--background-color);
+  transition: var(--transition-links);
+}
+.all__price {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .wrapper__container-price {
+    gap: 10px;
+  }
+  .title__box {
+    font-size: 22px;
+  }
+}
+@media (max-width: 780px) {
+  .wrapper__container-price {
+    grid-template-columns: minmax(250px, 421px);
+    gap: 10px;
+  }
+  .subtitle__price {
+    margin-bottom: 30px;
+  }
+  .box__price:hover {
+    transition: none;
+    border: 1px solid var(--color-gray);
+  }
+}
+@media (max-width: 605px) {
+  .subtitle__price {
+    display: none;
+  }
+}
+@media (max-width: 435px) {
+  .title__box {
+    margin-bottom: 40px;
+  }
+  .about__price {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .title__price {
+    font-size: 20px;
+  }
+  .title__box {
+    font-size: 18px;
+  }
+  .box__btn {
+    margin-bottom: 40px;
+  }
+  .all__price {
+    display: flex;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .all__price:hover {
+    color: var(--background-color);
+    transition: var(--transition-links);
+  }
+  .box__price:nth-child(odd) {
+    display: none;
+  }
+}
