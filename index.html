@@ -3,8 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../movee/css/index.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <section class="car__park container">
+      <div class="title__car-park"><h3>Автопарк</h3></div>
+      <div class="subtitle__car-park">
+        <h4>10 видов автомобилей от 800 кг до 10 тонн</h4>
+      </div>
+      <div class="wrapper__choice">
+        <button class="choice__car"><span>Газели</span></button>
+        <button class="choice__car"><span>Каблуки</span></button>
+        <button class="choice__car"><span>Грузовики</span></button>
+      </div>
+      <div class="choice__slide">
+        <div class="about__car">
+          <div class="name__car"><span>Газель 3 метра </span></div>
+          <div class="characteristics__car">
+            <li>Ширина 2 м</li>
+            <li>Высота 2 м</li>
+            <li>Объем 16 м³</li>
+            <li>Грузоподъемность 1,5 т</li>
+          </div>
+          <button class="btn__car-choice">Заказать</button>
+        </div>
+        <div class="about__car-mobile"><p>Газель 3 метра / 1,5 тонны</p></div>
+        <img class="img__car" src="./img/car.png" alt="" />
+      </div>
+      <div class="slide__circle">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="box__btn-mobile">
+        <button class="btn__car-choice-mobile">Заказать</button>
+      </div>
+
+      <svg
+        class="arrow-left"
+        width="11"
+        height="20"
+        viewBox="0 0 11 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.75 17.75L2 9.875L8.75 2"
+          stroke="currentcolor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+        class="arrow-right"
+        width="11"
+        height="20"
+        viewBox="0 0 11 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.75 17.75L2 9.875L8.75 2"
+          stroke="currentcolor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </section>
+  </body>
 </html>
