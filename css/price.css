@@ -125,4 +125,7 @@
   .box__price:nth-child(odd) {
     display: none;
   }
+  .price {
+    background-color: var(--color-background);
+  }
 }
