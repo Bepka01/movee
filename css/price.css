@@ -86,6 +86,7 @@
   .subtitle__price {
     margin-bottom: 30px;
   }
+
   .box__price:hover {
     transition: none;
     border: 1px solid var(--color-gray);
@@ -106,6 +107,7 @@
   }
   .title__price {
     font-size: 20px;
+    margin-bottom: -60px;
   }
   .title__box {
     font-size: 18px;
@@ -127,5 +129,8 @@
   }
   .price {
     background-color: var(--color-background);
+  }
+  .box__price {
+    border: none;
   }
 }
