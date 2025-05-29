@@ -94,7 +94,7 @@
     overflow-x: scroll;
   }
   .box__feedback {
-    width: 320px;
+    width: 50vw;
   }
 }
 @media (max-width: 470px) {
