@@ -1,0 +1,224 @@
+.banner {
+  background-color: var(--background-color);
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 95px;
+}
+.header__nav,
+.header__links,
+.header__characteristics,
+.header__tools,
+.header__svg,
+.header__ellipse,
+.header__ellipse-small,
+.header__burger {
+  display: flex;
+}
+.header__nav,
+.header__tools {
+  justify-content: space-between;
+}
+.header__nav,
+.header__svg,
+.header__ellipse,
+.header__ellipse-small {
+  align-items: center;
+}
+.header__nav {
+  margin-bottom: 63px;
+}
+.subtitle__logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+.header__links {
+  z-index: var(--z-top);
+  gap: 45px;
+}
+.header__link {
+  font-size: 18px;
+  color: var(--color-text);
+}
+.header__contacts {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: 1px underline;
+  text-underline-offset: 7px;
+}
+.header__contacts a {
+  color: var(--color-text);
+}
+.header__movee-service {
+  height: 100%;
+  align-items: flex-start;
+  z-index: var(--z-top);
+  position: relative;
+}
+.header__title {
+  font-size: 70px;
+  font-weight: 600;
+  color: var(--color-text);
+  z-index: var(--z-top);
+}
+.header__movee-text {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: var(--color-text);
+}
+.header__button {
+  border: 0;
+  width: 280px;
+  height: 60px;
+  background-color: var(--color-red);
+  margin-bottom: 15px;
+  position: relative;
+  color: var(--color-white);
+  font-size: 24px;
+  z-index: var(--z-top);
+}
+.header__characteristics {
+  gap: 35px;
+}
+.header__tools {
+  color: var(--color-text);
+}
+.header__svg {
+  gap: 10px;
+}
+.header__ellipse {
+  background-color: #3d9be94d;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+.header__ellipse-small {
+  background-color: #3d9be9cc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.header__ellipse,
+.header__ellipse-small {
+  justify-content: center;
+  border-radius: 50%;
+}
+.header__man {
+  height: 608px;
+  width: 381px;
+  position: absolute;
+  top: 14px;
+  left: 45%;
+  z-index: var(--z-bottom);
+}
+.header__car {
+  height: 300px;
+  width: 499px;
+  position: absolute;
+  top: 180px;
+  left: 65%;
+}
+.header__burger {
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+.button-border {
+  z-index: var(--z-bottom);
+  width: 280px;
+  height: 60px;
+  position: absolute;
+  border: 3px solid var(--color-white);
+  top: 280px;
+  left: 25px;
+}
+.burger__line {
+  border: 1px solid var(--color-black);
+  height: 1px;
+  width: 44px;
+}
+.header__mobile-man {
+  display: none;
+}
+.header__contacts:hover a,
+.header__link:hover {
+  color: var(--color-red);
+  transition: var(--transition-links);
+  cursor: pointer;
+}
+.header__button:hover {
+  background-color: var(--color-orange);
+  cursor: pointer;
+}
+.header__ellipse:hover .header__ellipse-small {
+  width: 130px;
+  height: 130px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header__button:hover + .button-border {
+  background-color: var(--color-white);
+}
+@media (max-width: 1050px) {
+  .header__characteristics {
+    display: none;
+  }
+  .button-border {
+    display: none;
+  }
+  .banner {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 810px) {
+  .banner {
+    max-height: unset;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__mobile-man {
+    display: unset;
+    width: 248px;
+    height: 396px;
+    position: relative;
+    top: 5px;
+    left: 20px;
+  }
+  .button-border {
+    display: none;
+  }
+  .header__nav {
+    margin-bottom: 16px;
+  }
+  .header__contacts,
+  .header__links,
+  .header__tools,
+  .header__car,
+  .header__man {
+    display: none;
+  }
+  .header__movee-service {
+    align-items: center;
+    text-align: center;
+  }
+  .header__title {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .header__movee-text {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
