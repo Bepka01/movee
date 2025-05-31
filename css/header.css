@@ -6,6 +6,7 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  margin-bottom: 95px;
 }
 .header__nav,
 .header__links,
@@ -169,6 +170,12 @@
 @media (max-width: 1050px) {
   .header__characteristics {
     display: none;
+  }
+  .button-border {
+    display: none;
+  }
+  .banner {
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 810px) {
