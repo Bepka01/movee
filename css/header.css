@@ -7,6 +7,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 95px;
+  padding: 15px;
 }
 .header__nav,
 .header__links,
