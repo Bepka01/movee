@@ -167,6 +167,7 @@
 }
 .header__button:hover + .button-border {
   background-color: var(--color-white);
+  transition: var(--transition-links);
 }
 @media (max-width: 1050px) {
   .header__characteristics {
