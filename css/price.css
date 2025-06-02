@@ -11,6 +11,7 @@
   text-align: center;
   font-weight: 600;
 }
+
 .wrapper__container-price {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 421px));
@@ -133,5 +134,8 @@
   }
   .box__price {
     border: none;
+  }
+  .wrapper__price {
+    padding: 50px 0 0 0;
   }
 }
