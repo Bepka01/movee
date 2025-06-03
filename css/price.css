@@ -59,6 +59,7 @@
   font-size: 20px;
   border: none;
   cursor: pointer;
+  color: var(--color-black);
 }
 .box__price:hover {
   border: 1px solid var(--background-color);
@@ -131,6 +132,9 @@
   }
   .price {
     background-color: var(--color-background);
+  }
+  .box__price:hover {
+    border: none;
   }
   .box__price {
     border: none;
