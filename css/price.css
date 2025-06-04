@@ -73,6 +73,10 @@
 .all__price {
   display: none;
 }
+.btn__price:active {
+  border: 1px solid var(--background-color);
+  transition: var(--transition-links);
+}
 @media (max-width: 1024px) {
   .wrapper__container-price {
     gap: 10px;
