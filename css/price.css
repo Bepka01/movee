@@ -64,11 +64,13 @@
 .btn__price:hover {
   border: 1px solid var(--background-color);
   transition: var(--transition-links);
+  border: none;
 }
 .btn__price:hover {
   color: var(--color-white);
   box-shadow: 0 0 30px var(--background-color);
   transition: var(--transition-links);
+  border: none;
 }
 .all__price {
   display: none;
