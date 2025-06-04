@@ -29,6 +29,10 @@
   align-items: center;
   justify-content: center;
 }
+.box__price:hover {
+  border: 1px solid var(--color-gold);
+  transition: var(--transition-links);
+}
 .title__box {
   font-size: 24px;
   font-weight: 600;
@@ -60,29 +64,27 @@
   border: none;
   cursor: pointer;
   color: var(--color-black);
-}
-.btn__price:hover {
-  border: 1px solid var(--background-color);
   transition: var(--transition-links);
-  border: none;
 }
 .btn__price:hover {
   color: var(--color-white);
   box-shadow: 0 0 30px var(--background-color);
   transition: var(--transition-links);
-  border: none;
 }
 .all__price {
   display: none;
 }
 @media (hover: hover) {
   .btn__price:hover {
-    background-color: var(--background-color);
+    color: var(--color-white);
     box-shadow: 0 0 30px var(--background-color);
+    background-color: var(--background-color);
   }
 }
 @media (hover: none) {
   .btn__price:active {
+    color: var(--color-white);
+    box-shadow: 0 0 30px var(--background-color);
     background-color: var(--background-color);
   }
 }
