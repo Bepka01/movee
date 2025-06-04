@@ -65,12 +65,13 @@
   cursor: pointer;
   color: var(--color-black);
   transition: var(--transition-links);
+  touch-action: manipulation;
 }
-.btn__price:hover {
+/* .btn__price:hover {
   color: var(--color-white);
   box-shadow: 0 0 30px var(--background-color);
   transition: var(--transition-links);
-}
+} */
 .all__price {
   display: none;
 }
