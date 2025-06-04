@@ -61,7 +61,7 @@
   cursor: pointer;
   color: var(--color-black);
 }
-.box__price:hover {
+.btn__price:hover {
   border: 1px solid var(--background-color);
   transition: var(--transition-links);
 }
