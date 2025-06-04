@@ -109,6 +109,21 @@
     transition: none;
   }
 }
+@media (hover: hover) {
+  .btn__price:hover {
+    color: var(--color-white);
+    box-shadow: 0 0 30px var(--background-color);
+    transition: var(--transition-links);
+  }
+}
+@media (hover: none) {
+  .btn__price:active {
+    color: var(--color-white);
+    box-shadow: 0 0 30px var(--background-color);
+    transition: var(--transition-links);
+  }
+}
+
 @media (max-width: 605px) {
   .subtitle__price {
     display: none;
