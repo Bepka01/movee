@@ -73,6 +73,17 @@
 .all__price {
   display: none;
 }
+@media (hover: hover) {
+  .btn__price:hover {
+    background-color: var(--background-color);
+    box-shadow: 0 0 30px var(--background-color);
+  }
+}
+@media (hover: none) {
+  .btn__price:active {
+    background-color: var(--background-color);
+  }
+}
 @media (max-width: 1024px) {
   .wrapper__container-price {
     gap: 10px;
@@ -141,17 +152,5 @@
   }
   .wrapper__price {
     padding: 50px 0 0 0;
-  }
-}
-@media (hover: hover) {
-  .btn__price:hover {
-    background-color: var(--background-color);
-    box-shadow: 0 0 30px var(--background-color);
-  }
-}
-@media (hover: none) {
-  .btn__price:active {
-    background-color: var(--background-color);
-    box-shadow: 0 0 30px var(--background-color);
   }
 }
