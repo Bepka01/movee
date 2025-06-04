@@ -66,6 +66,19 @@
   color: var(--color-black);
   transition: var(--transition-links);
   touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn__price:hover {
+    color: var(--color-white);
+    box-shadow: 0 0 30px var(--background-color);
+  }
+}
+@media (hover: none) {
+  .btn__price:active {
+    color: var(--color-white);
+    box-shadow: 0 0 30px var(--background-color);
+  }
 }
 .btn__price:hover,
 .btn__price:active {
