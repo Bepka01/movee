@@ -223,4 +223,7 @@
     font-size: 18px;
     margin-bottom: 0;
   }
+  .header__button:hover {
+    background-color: var(--color-red);
+  }
 }
