@@ -101,6 +101,13 @@
     transition: none;
     background-color: var(--color-gold);
   }
+  .btn__price:active {
+    box-shadow: 0 0 30px var(--color-gold);
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: transform 0.1s;
+    color: var(--color-white);
+  }
 }
 
 @media (max-width: 605px) {
