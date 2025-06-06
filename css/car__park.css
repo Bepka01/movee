@@ -113,9 +113,31 @@
     gap: 15px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .choice__slide {
     flex-direction: column-reverse;
+  }
+  .btn__car-choice:hover,
+  .btn__car-choice-mobile:hover {
+    box-shadow: none;
+    color: var(--color-black);
+  }
+  .btn__car-choice:active,
+  .btn__car-choice-mobile:active {
+    box-shadow: 0 0 30px var(--background-color);
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: transform 0.1s;
+  }
+  .arrow-left:hover,
+  .arrow-right:hover {
+    color: var(--color-black);
+  }
+  .arrow-left:active,
+  .arrow-right:active {
+    color: var(--background-color);
+    opacity: 0.8;
+    transition: transform 0.1s;
   }
 }
 @media (max-width: 440px) {
@@ -183,10 +205,5 @@
   .about__car-mobile {
     color: var(--color-black);
     font-size: 12px;
-  }
-  .btn__car-choice-mobile:hover {
-    box-shadow: 0 0 30px var(--background-color);
-    transition: var(--transition-links);
-    color: var(--color-white);
   }
 }
