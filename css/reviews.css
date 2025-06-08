@@ -97,19 +97,22 @@
     width: 50vw;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 470px) {
+  .box__feedback {
+    width: 100vw;
+  }
+}
+@media (pointer: coarse) and (hover: none) {
   .btn__all-reviews:hover {
-    background-color: var(--color-gold);
+    background-color: transparent;
     border: 2px solid var(--color-black);
   }
+
   .btn__all-reviews:active {
     background-color: var(--color-white);
     transform: scale(0.95);
     opacity: 0.8;
-  }
-}
-@media (max-width: 470px) {
-  .box__feedback {
-    width: 100vw;
+    transition: none;
   }
 }
