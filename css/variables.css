@@ -1,4 +1,7 @@
 :root {
+  --color-gold: #fed100;
+  --color-gray: #ebebeb;
+  --transition-active: all 0.3s ease;
   --background-color: #fed100;
   --color-text: #333333;
   --transition-links: all 0.2s ease-in-out;
@@ -6,5 +9,7 @@
   --color-red: #ff352b;
   --color-white: #ffffff;
   --color-black: #333333;
-  --color-gray: #ebebeb;
+  --color-background: #f8fbff;
+  --z-bottom: 1;
+  --z-top: 2;
 }
