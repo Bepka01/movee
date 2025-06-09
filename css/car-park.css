@@ -80,6 +80,7 @@
 .arrow-right {
   position: absolute;
   top: 65%;
+  cursor: pointer;
 }
 .arrow-right {
   transform: rotate(180deg);
