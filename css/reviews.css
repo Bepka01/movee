@@ -26,7 +26,7 @@
 }
 .container__feedback {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
   gap: 25px;
   margin-bottom: 60px;
 }
@@ -89,7 +89,7 @@
     font-size: 18px;
   }
   .container__feedback {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
   .box__feedback {
     width: 50vw;
