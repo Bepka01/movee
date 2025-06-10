@@ -14,6 +14,7 @@
 .user__name {
   font-size: 24px;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 .data__feedback,
 .user__feedback {
@@ -25,8 +26,8 @@
   color: var(--color-red);
 }
 .container__feedback {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  justify-content: space-between;
   gap: 25px;
   margin-bottom: 60px;
 }
@@ -43,13 +44,15 @@
 }
 .user__feedback {
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  width: 100%;
 }
 .full__feedback {
   text-decoration: underline;
   text-underline-offset: 3px;
+  white-space: nowrap;
 }
 .btn__all-reviews {
   cursor: pointer;
@@ -80,9 +83,6 @@
   }
   .title__reviews {
     margin-bottom: 30px;
-  }
-
-  .title__reviews {
     font-size: 20px;
   }
   .user__name {
@@ -91,14 +91,19 @@
   .container__feedback {
     overflow-x: auto;
   }
-  .box__feedback {
+}
+@media (max-width: 768px) {
+  .user__feedback {
     width: 50vw;
   }
 }
 
 @media (max-width: 470px) {
-  .box__feedback {
-    width: 100vw;
+  .user__feedback {
+    width: 90vw;
+  }
+  .box__feedback:nth-child(odd) {
+    display: none;
   }
 }
 @media (pointer: coarse) and (hover: none) {
