@@ -1,0 +1,117 @@
+.reviews {
+  background-color: var(--color-gold);
+  padding: 90px 10px;
+}
+.title__reviews {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+.title__reviews,
+.user__name {
+  font-weight: 600;
+}
+.user__name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.data__feedback,
+.user__feedback {
+  margin-bottom: 20px;
+}
+.data__feedback::after {
+  content: "★★★★★";
+  margin-left: 7px;
+  color: var(--color-red);
+}
+.container__feedback {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+.btn__reviews {
+  display: flex;
+  justify-content: center;
+}
+
+.data__feedback,
+.user__feedback,
+.full__feedback {
+  font-size: 16px;
+  color: var(--color-black);
+}
+.user__feedback {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.full__feedback {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.btn__all-reviews {
+  cursor: pointer;
+  max-width: 250px;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+.btn__all-reviews:hover {
+  background-color: var(--color-white);
+  border: 0;
+  transition: var(--transition-active);
+}
+.full__feedback:hover {
+  color: var(--color-white);
+  transition: var(--transition-active);
+}
+.box__feedback {
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .reviews {
+    padding: 20px 0px;
+  }
+  .title__reviews {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .user__name {
+    font-size: 18px;
+  }
+  .container__feedback {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 470px) {
+  .user__feedback {
+    width: 90vw;
+  }
+  .box__feedback:nth-child(odd) {
+    display: none;
+  }
+}
+@media (pointer: coarse) and (hover: none) {
+  .btn__all-reviews:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-black);
+  }
+
+  .btn__all-reviews:active {
+    background-color: var(--color-white);
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: none;
+  }
+}

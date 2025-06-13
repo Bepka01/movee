@@ -1,6 +1,7 @@
 .car__park {
   position: relative;
   padding: 10px;
+  margin-bottom: 45px;
 }
 .title__car-park {
   font-size: 30px;

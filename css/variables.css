@@ -1,14 +1,14 @@
 :root {
   --color-gold: #fed100;
+  --color-black: #333333;
   --color-gray: #ebebeb;
   --transition-active: all 0.3s ease;
+  --color-white: #ffffff;
+  --color-red: #ff352b;
   --background-color: #fed100;
   --color-text: #333333;
   --transition-links: all 0.2s ease-in-out;
   --color-orange: #ff772b;
-  --color-red: #ff352b;
-  --color-white: #ffffff;
-  --color-black: #333333;
   --color-background: #f8fbff;
   --z-bottom: 1;
   --z-top: 2;
