@@ -1,4 +1,8 @@
 @import url(./reset.css);
-@import url(./variables.css);
 @import url(./style.css);
 @import url(./reviews.css);
+@import url(./variables.css);
+@import url(./car-park.css);
+@import url(./price.css);
+@import url(./about.css);
+@import url(./header.css);

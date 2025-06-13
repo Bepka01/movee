@@ -5,5 +5,11 @@
   --transition-active: all 0.3s ease;
   --color-white: #ffffff;
   --color-red: #ff352b;
-  --transition-active: all 0.3s ease;
+  --background-color: #fed100;
+  --color-text: #333333;
+  --transition-links: all 0.2s ease-in-out;
+  --color-orange: #ff772b;
+  --color-background: #f8fbff;
+  --z-bottom: 1;
+  --z-top: 2;
 }

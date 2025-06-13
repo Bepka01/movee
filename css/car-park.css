@@ -1,0 +1,218 @@
+.car__park {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 45px;
+}
+.title__car-park {
+  font-size: 30px;
+}
+.title__car-park,
+.subtitle__car-park {
+  text-align: center;
+  font-weight: 600;
+}
+.title__car-park {
+  margin-bottom: 15px;
+}
+.subtitle__car-park {
+  margin-bottom: 60px;
+}
+.wrapper__choice {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.choice__car {
+  max-width: 200px;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--color-gray);
+  margin-bottom: 60px;
+  font-size: 20px;
+  color: var(--color-black);
+  cursor: pointer;
+}
+.choice__slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1000px;
+}
+.characteristics__car li {
+  list-style-type: none;
+  line-height: 131%;
+}
+.characteristics__car li::before {
+  content: "✔";
+  margin-right: 15px;
+}
+.characteristics__car {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+.img__car {
+  max-width: 641px;
+  width: 100%;
+  height: 453px;
+}
+.btn__car-choice {
+  max-width: 250px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--background-color);
+  border: none;
+  font-size: 24px;
+  color: var(--color-black);
+  font-size: 20px;
+  cursor: pointer;
+}
+.name__car {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 65%;
+  cursor: pointer;
+}
+.arrow-right {
+  transform: rotate(180deg);
+  right: 1%;
+}
+.arrow-left {
+  left: 1%;
+}
+.about__car-mobile,
+.btn__car-choice-mobile {
+  display: none;
+}
+.choice__car:hover {
+  border: 1px solid var(--background-color);
+  transition: var(--transition-links);
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  color: var(--background-color);
+  transition: var(--transition-links);
+}
+.btn__car-choice:hover {
+  box-shadow: 0 0 30px var(--background-color);
+  transition: var(--transition-links);
+  color: var(--color-white);
+}
+@media (max-width: 1024px) {
+  .img__car {
+    max-width: 421px;
+    height: 327px;
+  }
+  .characteristics__car {
+    font-size: 14px;
+  }
+  .characteristics__car {
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .choice__slide {
+    flex-direction: column-reverse;
+  }
+  .btn__car-choice:hover,
+  .btn__car-choice-mobile:hover {
+    box-shadow: none;
+    color: var(--color-black);
+  }
+  .btn__car-choice:active,
+  .btn__car-choice-mobile:active {
+    box-shadow: 0 0 30px var(--background-color);
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: transform 0.1s;
+    color: var(--color-white);
+  }
+  .arrow-left:hover,
+  .arrow-right:hover {
+    color: var(--color-black);
+  }
+  .arrow-left:active,
+  .arrow-right:active {
+    color: var(--background-color);
+    opacity: 0.8;
+    transition: transform 0.1s;
+  }
+}
+@media (max-width: 440px) {
+  .arrow-left,
+  .arrow-right,
+  .subtitle__car-park,
+  .about__car {
+    display: none;
+  }
+  .choice__car {
+    border: none;
+  }
+  .about__car-mobile {
+    display: block;
+    margin-bottom: 35px;
+  }
+  .slide__circle {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 45px;
+  }
+  .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-black);
+  }
+  .circle:hover {
+    outline: 2px solid var(--background-color);
+    outline-offset: 4px;
+    transition: var(--transition-links);
+  }
+  .choice__car:hover {
+    text-decoration: underline var(--background-color);
+    text-underline-offset: 5px;
+    transition: var(--transition-links);
+  }
+  .img__car {
+    width: 335px;
+    height: 227px;
+  }
+  .title__car-park {
+    font-size: 20px;
+  }
+  .choice__car {
+    font-size: 16px;
+  }
+  .choice__car:hover {
+    border: none;
+  }
+  .box__btn-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .btn__car-choice-mobile {
+    display: block;
+    max-width: 250px;
+    width: 100%;
+    border: 0;
+    height: 50px;
+    background-color: var(--background-color);
+    font-size: 20px;
+    color: var(--color-black);
+  }
+  .about__car-mobile {
+    color: var(--color-black);
+    font-size: 12px;
+  }
+}
