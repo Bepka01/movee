@@ -14,6 +14,7 @@
   line-height: 131%;
   margin-bottom: 45px;
 }
+
 .wrapper__input-user-info {
   display: flex;
   justify-content: space-between;
@@ -171,6 +172,15 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+.wrapper__order-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
 }
 .time {
   font-size: 96px;
@@ -191,12 +201,57 @@ select {
   z-index: var(--z-bottom);
   width: 280px;
   height: 60px;
-  position: absolute;
   border: 3px solid var(--color-gold);
-  top: 280px;
-  left: 25px;
+  top: 20px;
+  left: 20px;
 }
 .order__button:hover + .order-border {
   background-color: var(--color-white);
   transition: var(--transition-links);
+  border: 3px solid var(--color-black);
+}
+.order__button:hover {
+  background-color: var(--color-orange);
+}
+.check__input-btn {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* Стили для кастомного чекбокса */
+.checkbox-btn {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--color-gray);
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: -30px;
+}
+
+/* Стили для отмеченного состояния */
+.check__input-btn:checked + .checkbox-btn {
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+  background-image: url(../img/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+/* Общие стили для метки */
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
 }
