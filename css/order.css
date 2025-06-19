@@ -99,8 +99,8 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 2px solid var(--color-gray);
   border-radius: 50%;
   cursor: pointer;
@@ -108,8 +108,8 @@ select {
   margin-right: 15px;
 }
 .radio__input:checked {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   background-color: var(--color-gold);
   outline: 2px solid var(--color-gold);
   outline-offset: 3px;
@@ -144,6 +144,7 @@ select {
   border-radius: 2px;
   margin-left: -30px;
   border: 2px solid var(--color-gray);
+  cursor: pointer;
 }
 .check {
   padding-left: 30px;
