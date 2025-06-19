@@ -219,6 +219,7 @@ input:checked ~ .radio {
   color: var(--color-white);
   font-size: 24px;
   z-index: var(--z-top);
+  cursor: pointer;
 }
 .order-border {
   position: absolute;
