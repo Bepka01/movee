@@ -1,6 +1,7 @@
 .reviews {
   background-color: var(--color-gold);
   padding: 90px 10px;
+  margin-bottom: 100px;
 }
 .title__reviews {
   text-align: center;

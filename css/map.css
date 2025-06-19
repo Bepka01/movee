@@ -1,0 +1,7 @@
+.map {
+  background-image: url(../img/bg-map.png);
+  max-width: 1920px;
+  height: 666px;
+  background-position: center;
+  background-size: cover;
+}
