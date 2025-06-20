@@ -1,7 +1,59 @@
-.map {
-  background-image: url(../img/bg-map.png);
-  max-width: 1920px;
-  height: 666px;
-  background-position: center;
-  background-size: cover;
+.block__map-mobile {
+  position: absolute;
+  max-width: 300px;
+  width: 100%;
+  height: 286px;
+  background-color: var(--color-white);
+  left: 150px;
+  top: 150px;
+  padding: 40px 35px;
+}
+.title__map {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.about__map {
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.about__map span::before {
+  content: "✓";
+  margin-right: 15px;
+  color: var(--color-gold);
+}
+.svg__icons-media-map {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  color: var(--color-black);
+}
+.svg__icons-media-map svg:hover {
+  color: var(--color-gold);
+  transition: var(--transition-active);
+}
+.mobile__map-block {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .block__map-mobile {
+    left: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .block__map-mobile {
+    top: 400px;
+    left: 0px;
+  }
+}
+@media (max-width: 460px) {
+  .block__map-mobile {
+    display: none;
+  }
+  .mobile__map-block {
+    display: block;
+  }
 }
