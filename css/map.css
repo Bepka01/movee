@@ -11,6 +11,7 @@
 .title__map {
   margin-bottom: 40px;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 .about__map {
@@ -48,12 +49,16 @@
     top: 400px;
     left: 0px;
   }
+  .map {
+    margin-bottom: 45px;
+  }
 }
 @media (max-width: 460px) {
   .block__map-mobile {
     display: none;
   }
   .mobile__map-block {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
