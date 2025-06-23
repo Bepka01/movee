@@ -10,13 +10,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/index.css" />
     <title>Document</title>
   </head>
   <body>
@@ -48,7 +41,7 @@
             alt="Грузчик"
           />
         </div>
-        <div>
+        <div class="wrapper__header-btn">
           <button class="header__button">Заказать</button>
           <div class="button-border"></div>
         </div>
@@ -302,6 +295,131 @@
         </div>
         <div class="btn__reviews">
           <button class="btn__all-reviews">Все отзывы</button>
+        </div>
+      </div>
+    </section>
+    <section class="order">
+      <h3 class="title__order">Закажи переезд прямо сейчас со скидкой %</h3>
+      <p class="subtitle__order">Мы перезвоним в течении 10 секунд</p>
+      <div class="wrapper__input-user-info">
+        <label>
+          <input type="text" name="user__name" placeholder="Ваше имя" />
+        </label>
+        <label>
+          <input type="tel" name="user__tel" placeholder="Телефон" />
+        </label>
+      </div>
+      <div class="wrapper__order-about-city">
+        <div class="order__choice-region">
+          <h4 class="title__region">Укажите область</h4>
+          <label for="region-select">
+            <select
+              name="Область"
+              id="region-select"
+              placeholder="Например:Минская"
+            >
+              <option value="" disabled selected hidden>
+                Например: Минская
+              </option>
+              <option value="1">Бресткая</option>
+              <option value="2">Витебская</option>
+              <option value="3">Гомельская</option>
+              <option value="4">Гродненская</option>
+              <option value="5">Минская</option>
+              <option value="6">Минская область</option>
+            </select>
+          </label>
+        </div>
+        <div class="order__choice-city">
+          <h4 class="title__city">Укажите город</h4>
+          <label for="city-select">
+            <select name="city__select" id="city__select">
+              <option value="1">Брест</option>
+              <option value="2">Жабинка</option>
+              <option value="3">Малорита</option>
+              <option value="4">Иваново</option>
+              <option value="5">Барановичи</option>
+              <option value="6">Пинск</option>
+            </select>
+            <input type="text" placeholder="Добавьте город" />
+          </label>
+        </div>
+      </div>
+      <h4 class="title__payment-method">Способ оплаты</h4>
+      <div class="wrapper__payment-method">
+        <label class="radio__option">
+          <input class="radio__input" type="radio" name="payment_method" />
+          <div class="radio">
+            <div class="radio-checked"></div>
+          </div>
+          Наличными курьеру
+        </label>
+        <label class="radio__option">
+          <input class="radio__input" type="radio" name="payment_method" />
+          <div class="radio">
+            <div class="radio-checked"></div>
+          </div>
+          Картой курьеру
+        </label>
+        <label class="radio__option">
+          <input class="radio__input" type="radio" name="payment_method" />
+          <div class="radio">
+            <div class="radio-checked"></div>
+          </div>
+          Банковский перевод
+        </label>
+      </div>
+      <h4 class="title__add-servis">Дополнительные услуги</h4>
+      <div class="wrapper__add-servis">
+        <label class="check option">
+          <span class="checkbox"></span>
+          <input class="check__input" type="checkbox" />вызов замерщика
+        </label>
+
+        <label class="check option">
+          <span class="checkbox"> </span>
+          <input class="check__input" type="checkbox" />упаковка для хрупких
+          предметов
+        </label>
+
+        <label class="check option">
+          <span class="checkbox"></span>
+          <input class="check__input" type="checkbox" />кран
+        </label>
+        <br />
+        <label class="check option">
+          <span class="checkbox"></span>
+          <input class="check__input" type="checkbox" />сборка мебели
+        </label>
+
+        <label class="check option">
+          <span class="checkbox"></span>
+          <input class="check__input" type="checkbox" />крупногабаритные
+          предметы
+        </label>
+      </div>
+      <div class="wrapper__confrim-order">
+        <p class="time">14:88:00</p>
+        <div class="wrapper__order-btn">
+          <button class="order__button">Заказать</button>
+          <div class="order-border"></div>
+          <label class="checkbox-label">
+            <input class="check__input-btn" type="checkbox" />
+            <span class="checkbox-btn"></span>
+            Даю согласие на обработку данных
+          </label>
+        </div>
+      </div>
+      <div class="wrapper__order-mobile">
+        <div class="wrapper__order-mobile-btn">
+          <button class="order__mobile-btn">Перезвонить мне</button>
+        </div>
+        <div class="wrapper__input-mobile">
+          <label class="checkbox-label">
+            <input class="check__input-btn" type="checkbox" />
+            <span class="checkbox-btn"></span>
+            Даю согласие на обработку данных
+          </label>
         </div>
       </div>
     </section>

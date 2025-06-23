@@ -48,7 +48,7 @@
   .block__map-mobile {
     width: 250px;
     height: 250px;
-    padding: 0 5px;
+    padding: 10px;
   }
   .map {
     margin-bottom: 45px;
@@ -64,7 +64,8 @@
     flex-direction: column;
     padding: 10px;
   }
-  .svg__icons-media-map:hover svg {
-    color: var(--color-black);
+  .svg__icons-media-map,
+  .title__map {
+    display: none;
   }
 }

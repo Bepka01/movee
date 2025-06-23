@@ -82,6 +82,7 @@
 @media (max-width: 1000px) {
   .reviews {
     padding: 20px 0px;
+    margin-bottom: 40px;
   }
   .title__reviews {
     margin-bottom: 30px;
