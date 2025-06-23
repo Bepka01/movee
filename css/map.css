@@ -6,7 +6,7 @@
   background-color: var(--color-white);
   left: 150px;
   top: 150px;
-  padding: 40px 35px;
+  padding: 25px 35px;
 }
 .title__map {
   margin-bottom: 40px;
@@ -46,11 +46,13 @@
 }
 @media (max-width: 700px) {
   .block__map-mobile {
-    top: 400px;
-    left: 0px;
+    width: 250px;
+    height: 250px;
+    padding: 0 5px;
   }
   .map {
     margin-bottom: 45px;
+    height: 524px;
   }
 }
 @media (max-width: 460px) {
@@ -60,5 +62,9 @@
   .mobile__map-block {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+  }
+  .svg__icons-media-map:hover svg {
+    color: var(--color-black);
   }
 }
