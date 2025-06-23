@@ -1,6 +1,7 @@
 .reviews {
   background-color: var(--color-gold);
   padding: 90px 10px;
+  margin-bottom: 100px;
 }
 .title__reviews {
   text-align: center;
@@ -81,6 +82,7 @@
 @media (max-width: 1000px) {
   .reviews {
     padding: 20px 0px;
+    margin-bottom: 40px;
   }
   .title__reviews {
     margin-bottom: 30px;
