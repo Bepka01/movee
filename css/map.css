@@ -54,6 +54,19 @@
     margin-bottom: 45px;
     height: 524px;
   }
+  .about__map {
+    margin-bottom: 20px;
+  }
+  .title__map {
+    margin-bottom: 20px;
+  }
+  .svg__icons-media-map {
+    justify-content: center;
+  }
+  .block__map-mobile {
+    width: 200px;
+    height: 230px;
+  }
 }
 @media (max-width: 460px) {
   .block__map-mobile {
