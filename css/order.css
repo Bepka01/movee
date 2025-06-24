@@ -325,4 +325,7 @@ input:checked ~ .radio {
   .checkbox-label {
     padding-left: 40px;
   }
+  .wrapper__order-mobile {
+    margin-bottom: 70px;
+  }
 }
