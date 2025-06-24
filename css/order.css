@@ -1,0 +1,331 @@
+.order {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title__order {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+.subtitle__order {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 131%;
+  margin-bottom: 45px;
+}
+
+.wrapper__input-user-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.wrapper__input-user-info input {
+  border-bottom: 1px solid var(--color-black);
+  width: 300px;
+  padding-bottom: 10px;
+  background: transparent;
+}
+.wrapper__input-user-info input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+}
+.title__region,
+.title__city,
+.title__payment-method,
+.title__add-servis {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.order__choice-region select {
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 10px;
+}
+.order__choice-region select:focus {
+  border: none;
+  border-bottom: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+  outline: none;
+}
+.wrapper__order-about-city {
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
+  margin-bottom: 6.5px;
+}
+select {
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 70%;
+}
+.order__choice-city select {
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.order__choice-city select:focus {
+  border: none;
+  border-bottom: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+  outline: none;
+}
+.wrapper__order-about-city .order__choice-city input {
+  max-width: 300px;
+  width: 100%;
+  outline: none;
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 10px;
+}
+.wrapper__order-about-city .order__choice-city input:focus {
+  border-bottom: 1px solid var(--color-gold);
+  transition: var(--transition-active);
+}
+.wrapper__payment-method {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+.radio__input {
+  -webkit-appearance: none;
+}
+.radio__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.radio-checked {
+  display: none;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+}
+input:checked ~ .radio .radio-checked {
+  display: inline-block;
+}
+input:checked ~ .radio {
+  border-color: var(--color-gold);
+}
+
+.radio-cheked .wrapper__order-mobile,
+.wrapper__input-mobile {
+  display: none;
+}
+
+.radio__input:hover {
+  animation: spin 1s linear infinite;
+  border-top-color: var(--color-gold);
+}
+.wrapper__add-servis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.check__input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.checkbox {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  margin-left: -30px;
+  border: 2px solid var(--color-gray);
+  cursor: pointer;
+}
+.check {
+  padding-left: 30px;
+}
+.check__mark {
+  position: relative;
+  top: -4px;
+  left: -1px;
+}
+.wrapper__order-mobile {
+  display: none;
+}
+.checkbox + .check__input:checked {
+  border: 2px solid var(--color-gold);
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  margin-left: -30px;
+  background: url(../img/check-mark.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  background-position: center;
+}
+.checkbox:hover {
+  border: 2px solid var(--color-gold);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wrapper__confrim-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+.wrapper__order-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+.time {
+  font-size: 96px;
+}
+
+.order__button {
+  border: 0;
+  width: 280px;
+  height: 60px;
+  background-color: var(--color-red);
+  margin-bottom: 15px;
+  position: relative;
+  color: var(--color-white);
+  font-size: 24px;
+  z-index: var(--z-top);
+  cursor: pointer;
+}
+.order-border {
+  position: absolute;
+  z-index: var(--z-bottom);
+  width: 280px;
+  height: 60px;
+  border: 3px solid var(--color-gold);
+  top: 20px;
+  left: 20px;
+}
+.order__button:hover + .order-border {
+  background-color: var(--color-white);
+  transition: var(--transition-links);
+  border: 3px solid var(--color-black);
+}
+.order__button:hover {
+  background-color: var(--color-orange);
+}
+.check__input-btn {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.checkbox-btn {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--color-gray);
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: -30px;
+}
+
+.check__input-btn:checked + .checkbox-btn {
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+  background-image: url(../img/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  margin-left: -15px;
+}
+
+@media (max-width: 770px) {
+  .wrapper__order-about-city,
+  .wrapper__payment-method,
+  .title__add-servis,
+  .title__payment-method,
+  .wrapper__add-servis,
+  .wrapper__confrim-order {
+    display: none;
+  }
+  .title__order {
+    font-size: 20px;
+  }
+  .subtitle__order {
+    font-size: 15px;
+    text-align: center;
+  }
+  .wrapper__input-user-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .wrapper__order-mobile,
+  .wrapper__input-mobile {
+    display: block;
+  }
+  .wrapper__order-mobile-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .order__mobile-btn {
+    max-width: 300px;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border: none;
+  }
+  .wrapper__input-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .checkbox-label {
+    padding-left: 40px;
+  }
+  .wrapper__order-mobile {
+    margin-bottom: 70px;
+  }
+}

@@ -1,0 +1,108 @@
+.footer {
+  background-color: var(--color-gold);
+  padding: 50px;
+}
+.title__footer-movee {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.wrapper__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__movee {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__links a {
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer__media {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  max-width: 170px;
+  width: 100%;
+}
+.svg__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.footer__contacts {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__btn {
+  background-color: transparent;
+  max-width: 250px;
+  width: 100%;
+  height: 45px;
+  border: 1px solid var(--color-black);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.svg__footer ~ a {
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer__contacts a {
+  font-weight: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.svg__footer a:hover,
+.footer__links a:hover,
+.footer__contacts a:hover {
+  color: var(--color-white);
+  transition: var(--transition-active);
+}
+.footer__btn:hover {
+  border: 1px solid var(--color-white);
+  transition: var(--transition-active);
+  color: var(--color-white);
+}
+
+@media (max-width: 930px) {
+  .wrapper__footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__movee {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .footer__links {
+    margin-bottom: 65px;
+  }
+  .footer__media {
+    margin-bottom: 45px;
+  }
+  .footer__contacts a {
+    display: none;
+  }
+  .footer__movee h3 {
+    margin-bottom: 20px;
+  }
+  .svg__footer a:hover,
+  .footer__links a:hover,
+  .footer__contacts a:hover {
+    color: var(--color-black);
+  }
+  .footer__btn:hover {
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+  }
+}
