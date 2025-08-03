@@ -41,6 +41,7 @@
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1000px;
+  position: relative;
 }
 .characteristics__car li {
   list-style-type: none;
@@ -77,18 +78,23 @@
   font-weight: 600;
   margin-bottom: 35px;
 }
-.arrow-left,
-.arrow-right {
+.controls {
+  width: 25px;
+  height: 25px;
   position: absolute;
-  top: 65%;
+  top: 50%;
   cursor: pointer;
+  z-index: 20;
+  transform: translateY(-50%);
 }
-.arrow-right {
-  transform: rotate(180deg);
-  right: 1%;
+
+.controls--prev {
+  left: 10px;
 }
-.arrow-left {
-  left: 1%;
+
+.controls--next {
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
 }
 .about__car-mobile,
 .btn__car-choice-mobile {
@@ -98,8 +104,7 @@
   border: 1px solid var(--background-color);
   transition: var(--transition-links);
 }
-.arrow-left:hover,
-.arrow-right:hover {
+.controls:hover {
   color: var(--background-color);
   transition: var(--transition-links);
 }
@@ -137,21 +142,17 @@
     transition: transform 0.1s;
     color: var(--color-white);
   }
-  .arrow-left:hover,
-  .arrow-right:hover {
+  .controls:hover {
     color: var(--color-black);
   }
-  .arrow-left:active,
-  .arrow-right:active {
+  .controls:active {
     color: var(--background-color);
     opacity: 0.8;
     transition: transform 0.1s;
   }
 }
 @media (max-width: 440px) {
-  .arrow-left,
-  .arrow-right,
-  .subtitle__car-park,
+  .controls .subtitle__car-park,
   .about__car {
     display: none;
   }

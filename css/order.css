@@ -143,6 +143,23 @@ input:checked ~ .radio {
   gap: 40px;
   margin-bottom: 70px;
 }
+.btn__dropdown.rotate {
+  transform: rotate(270deg);
+}
+.btn__dropdown {
+  border: none;
+  background-color: transparent;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 30px;
+}
+.svg__btn:hover {
+  color: var(--color-gold);
+}
+.close {
+  display: none;
+}
 
 .check__input {
   position: absolute;

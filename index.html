@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="sctipt.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -197,6 +198,23 @@
       </div>
       <div class="choice__slide">
         <div class="about__car">
+          <svg
+            class="controls controls--prev"
+            width="11"
+            height="20"
+            viewBox="0 0 11 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.75 17.75L2 9.875L8.75 2"
+              stroke="currentcolor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
           <p class="name__car">Газель 3 метра</p>
           <ul class="characteristics__car">
             <li>Ширина 2 м</li>
@@ -205,10 +223,28 @@
             <li>Грузоподъемность 1,5 т</li>
           </ul>
           <button class="btn__car-choice">Заказать</button>
+          <svg
+            class="controls controls--next"
+            width="11"
+            height="20"
+            viewBox="0 0 11 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.75 17.75L2 9.875L8.75 2"
+              stroke="currentcolor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
+
         <p class="about__car-mobile">Газель 3 метра / 1,5 тонны</p>
         <img class="img__car" src="./img/car.png" alt="" />
       </div>
+
       <div class="slide__circle">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -219,39 +255,6 @@
       <div class="box__btn-mobile">
         <button class="btn__car-choice-mobile">Заказать</button>
       </div>
-
-      <svg
-        class="arrow-left"
-        width="11"
-        height="20"
-        viewBox="0 0 11 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.75 17.75L2 9.875L8.75 2"
-          stroke="currentcolor"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <svg
-        class="arrow-right"
-        width="11"
-        height="20"
-        viewBox="0 0 11 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.75 17.75L2 9.875L8.75 2"
-          stroke="currentcolor"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
     </section>
 
     <section class="reviews">
@@ -369,8 +372,29 @@
           Банковский перевод
         </label>
       </div>
-      <h4 class="title__add-servis">Дополнительные услуги</h4>
-      <div class="wrapper__add-servis">
+      <h4 class="title__add-servis">
+        Дополнительные услуги
+        <button class="btn__dropdown">
+          <svg
+            class="svg__btn"
+            width="11"
+            height="20"
+            viewBox="0 0 11 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.75 17.75L2 9.875L8.75 2"
+              stroke="currentcolor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h4>
+
+      <div class="wrapper__add-servis close">
         <label class="check option">
           <span class="checkbox"></span>
           <input class="check__input" type="checkbox" />вызов замерщика
