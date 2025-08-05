@@ -154,6 +154,10 @@ input:checked ~ .radio {
   width: 30px;
   height: 30px;
 }
+
+.svg__btn {
+  color: var(--color-black);
+}
 .svg__btn:hover {
   color: var(--color-gold);
 }
