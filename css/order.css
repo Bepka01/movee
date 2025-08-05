@@ -343,6 +343,7 @@ input:checked ~ .radio {
     display: flex;
     justify-content: center;
   }
+
   .checkbox-label {
     padding-left: 40px;
   }

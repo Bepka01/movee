@@ -46,6 +46,41 @@
   font-size: 18px;
   color: var(--color-text);
 }
+.close__burger {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.close__btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.burger__slide {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.burger__slide a {
+  color: var(--color-black);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+}
+.disp {
+  display: none;
+}
+
 .header__contacts {
   font-size: 24px;
   font-weight: 600;
