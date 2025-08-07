@@ -7,16 +7,13 @@ const body = document.querySelector("body");
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
-
   btn.classList.toggle("rotate");
 });
 
-btnBurger.addEventListener("click", function showBurgerMenu() {
+function toggleBurgerMenu() {
   burgerSlide.classList.toggle("disp");
   body.classList.toggle("lock");
-});
+}
 
-closeBurger.addEventListener("click", function closeBurgerMenu() {
-  burgerSlide.classList.toggle("disp");
-  body.classList.toggle("lock");
-});
+btnBurger.addEventListener("click", toggleBurgerMenu);
+closeBurger.addEventListener("click", toggleBurgerMenu);
