@@ -211,6 +211,10 @@ input:checked ~ .radio {
   background-size: 16px 12px;
   background-position: center;
 }
+.timer {
+  font-size: 72px;
+  font-weight: 600;
+}
 .checkbox:hover {
   border: 2px solid var(--color-gold);
   animation: spin 1s linear infinite;
