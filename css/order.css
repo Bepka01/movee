@@ -166,6 +166,15 @@ input:checked ~ .radio {
   color: var(--color-gold);
 }
 
+.order__btn {
+  max-width: 250px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-gold);
+  border: none;
+  font-size: 20px;
+  color: var(--color-black);
+}
 .wrapper__add-servis.close {
   opacity: 0;
   max-height: 0;
