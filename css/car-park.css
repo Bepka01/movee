@@ -37,6 +37,7 @@
 }
 .slider__container {
   overflow: hidden;
+  max-width: 1220px;
 }
 .wrapper__slider {
   position: relative;
@@ -53,11 +54,11 @@
   top: 50%;
 }
 .btn__prev {
-  left: 1px;
+  left: 0px;
 }
 .btn__next {
   transform: rotate(180deg);
-  right: 1px;
+  right: 0px;
 }
 .slider__btn {
   text-align: center;
@@ -74,10 +75,10 @@
 .slider__item {
   display: flex;
   justify-content: center;
-
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   flex: 0 0 100%;
+  gap: 150px;
 }
 .characteristics__car {
   max-width: 250px;
@@ -103,7 +104,7 @@
 }
 
 .slide__circle {
-  display: flex;
+  display: none;
   justify-content: center;
   gap: 15px;
   margin-bottom: 45px;
@@ -135,30 +136,44 @@
   color: var(--color-black);
 }
 .img__car {
-  max-width: 500px;
   width: 100%;
-  max-height: 300px;
+  max-width: 450px;
+  height: auto;
 }
+
 .control {
   width: 20px;
   height: 20px;
+}
+.btn__car-park {
+  display: none;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
   .slider__item {
     display: flex;
     justify-content: center;
+    gap: 50px;
   }
 }
 @media (max-width: 800px) {
   .slider__item {
     flex-direction: column-reverse;
+    margin-bottom: 30px;
   }
   .about__car {
     display: none;
   }
+  .btn__car-park {
+    display: flex;
+  }
   .about__car-mobile {
     display: block;
+  }
+  .slide__circle {
+    display: flex;
   }
 }
 

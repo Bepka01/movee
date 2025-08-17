@@ -42,50 +42,25 @@ function counts() {
 setInterval(counts, 1000);
 
 document.addEventListener("DOMContentLoaded", function () {
-  let position = 0;
-  const slidesToShow = 1;
-  const slidesToScroll = 1;
   const sliderContainer = document.querySelector(".slider__container");
   const sliderTrack = document.querySelector(".slider__track");
   const sliderItems = document.querySelectorAll(".slider__item");
   const btnNext = document.querySelector(".btn__next");
   const btnPrev = document.querySelector(".btn__prev");
-  const sliderCount = sliderItems.length;
-  const itemWidth = sliderContainer.clientWidth / slidesToShow;
-  const movePosition = slidesToScroll * itemWidth;
 
-  sliderItems.forEach((item) => {
-    item.style.minWidth = `${itemWidth}px`;
-  });
+  let currentIndex = 0;
 
   btnNext.addEventListener("click", function () {
-    const itemsLeft =
-      sliderCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+    if (currentIndex >= sliderItems.length - 1) {
+      return;
+    }
 
-    position -=
-      itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-    setPosition();
-    checkBtns();
+    currentIndex += 1;
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
   });
-
   btnPrev.addEventListener("click", function () {
-    const itemsLeft = Math.abs(position) / itemWidth;
-
-    position +=
-      itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-    setPosition();
-    checkBtns();
+    currentIndex -= 1;
+    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
   });
-
-  const setPosition = () => {
-    sliderTrack.style.transform = `translateX(${position}px)`;
-  };
-
-  const checkBtns = () => {
-    btnPrev.disabled = position === 0;
-    btnNext.disabled = position <= -(sliderCount - slidesToShow) * itemWidth;
-  };
-  checkBtns();
 });
+checkNextBtn();
