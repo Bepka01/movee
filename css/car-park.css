@@ -31,7 +31,7 @@
   color: var(--color-black);
   cursor: pointer;
 }
-.choice__car:hover {
+.choice__car.active {
   border: 1px solid var(--background-color);
   transition: var(--transition-links);
 }
@@ -45,6 +45,12 @@
 .slider__track {
   display: flex;
   transition: 0.2s;
+}
+.title__car-mobile {
+  text-align: center;
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 400;
 }
 .btn__next,
 .btn__prev {
@@ -102,6 +108,11 @@
   transition: opacity 0.3s ease;
   cursor: pointer;
 }
+.circle.active {
+  outline: 2px solid var(--background-color);
+  outline-offset: 4px;
+  transition: linear 0.2s ease-in-out;
+}
 
 .slide__circle {
   display: none;
@@ -155,7 +166,7 @@
   .slider__item {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
   }
 }
 @media (max-width: 800px) {
@@ -180,6 +191,9 @@
 @media (max-width: 440px) {
   .subtitle__car-park {
     display: none;
+  }
+  .img__car {
+    max-width: 250px;
   }
   .choice__car {
     border: none;

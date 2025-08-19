@@ -47,20 +47,64 @@ document.addEventListener("DOMContentLoaded", function () {
   const sliderItems = document.querySelectorAll(".slider__item");
   const btnNext = document.querySelector(".btn__next");
   const btnPrev = document.querySelector(".btn__prev");
+  const circle = document.querySelectorAll(".circle");
+  const blockCar = document.querySelectorAll(".choice__car");
 
   let currentIndex = 0;
+
+  swapCircle();
+  touchCircle();
+  touchBlock();
+  activeBlock();
 
   btnNext.addEventListener("click", function () {
     if (currentIndex >= sliderItems.length - 1) {
       return;
     }
-
     currentIndex += 1;
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    swapCircle();
   });
   btnPrev.addEventListener("click", function () {
+    if (currentIndex <= 0) {
+      return;
+    }
     currentIndex -= 1;
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    swapCircle();
   });
+  function swapCircle() {
+    circle.forEach((circle, index) => {
+      if (index === currentIndex) {
+        circle.classList.add("active");
+      } else circle.classList.remove("active");
+    });
+  }
+  function touchCircle() {
+    circle.forEach((circle, index) => {
+      circle.addEventListener("click", () => {
+        currentIndex = index;
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        swapCircle();
+      });
+    });
+  }
+  function touchBlock() {
+    blockCar.forEach((block, index) => {
+      block.addEventListener("click", () => {
+        currentIndex = index; //
+        sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        swapCircle();
+        activeBlock();
+      });
+    });
+  }
+  function activeBlock() {
+    blockCar.forEach((blockCar, index) => {
+      if (index === currentIndex) {
+        blockCar.classList.add("active");
+      } else blockCar.classList.remove("active");
+    });
+  }
 });
-checkNextBtn();
