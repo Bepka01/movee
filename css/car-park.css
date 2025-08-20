@@ -32,11 +32,7 @@
   cursor: pointer;
 }
 .choice__car.active {
-  transition: var(--transition-links);
-  text-decoration: underline;
-  text-decoration-color: var(--color-gold);
-  text-underline-offset: 4px;
-  transition: linear 0.2s ease;
+  border: 1px solid var(--color-gold);
 }
 .slider__container {
   overflow: hidden;
@@ -198,6 +194,14 @@
 @media (max-width: 440px) {
   .subtitle__car-park {
     display: none;
+  }
+  .choice__car.active {
+    border: none;
+    transition: var(--transition-links);
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-underline-offset: 6px;
+    transition: linear 0.2s ease;
   }
   .img__car {
     max-width: 250px;
