@@ -57,6 +57,7 @@
   border: none;
   position: absolute;
   top: 50%;
+  color: var(--color-black);
 }
 .btn__prev {
   left: 0px;
