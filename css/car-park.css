@@ -70,6 +70,10 @@
   text-align: center;
   justify-content: space-between;
 }
+.btn__next.disabled,
+.btn__prev.disabled {
+  color: var(--color-gray);
+}
 .about__car li {
   list-style-type: none;
 }

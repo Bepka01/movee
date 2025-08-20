@@ -56,14 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
   touchCircle();
   touchBlock();
   activeBlock();
+  updateButtonState();
 
   btnNext.addEventListener("click", function () {
     if (currentIndex >= sliderItems.length - 1) {
       return;
     }
+
     currentIndex += 1;
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     swapCircle();
+    activeBlock();
+    touchCircle();
+    updateButtonState();
   });
   btnPrev.addEventListener("click", function () {
     if (currentIndex <= 0) {
@@ -73,7 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
 
     swapCircle();
+    activeBlock();
+    updateButtonState();
   });
+
   function swapCircle() {
     circle.forEach((circle, index) => {
       if (index === currentIndex) {
@@ -87,16 +95,19 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = index;
         sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
         swapCircle();
+        updateButtonState();
+        activeBlock();
       });
     });
   }
   function touchBlock() {
     blockCar.forEach((block, index) => {
       block.addEventListener("click", () => {
-        currentIndex = index; //
+        currentIndex = index;
         sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
         swapCircle();
         activeBlock();
+        updateButtonState();
       });
     });
   }
@@ -106,5 +117,18 @@ document.addEventListener("DOMContentLoaded", function () {
         blockCar.classList.add("active");
       } else blockCar.classList.remove("active");
     });
+  }
+  function updateButtonState() {
+    if (currentIndex >= sliderItems.length - 1) {
+      btnNext.classList.add("disabled");
+    } else {
+      btnNext.classList.remove("disabled");
+    }
+
+    if (currentIndex <= 0) {
+      btnPrev.classList.add("disabled");
+    } else {
+      btnPrev.classList.remove("disabled");
+    }
   }
 });
