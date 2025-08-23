@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     swapCircle();
     activeBlock();
-    touchCircle();
     updateButtonState();
   });
   btnPrev.addEventListener("click", function () {
