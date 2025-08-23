@@ -190,6 +190,10 @@
   .slide__circle {
     display: flex;
   }
+  .btn__prev,
+  .btn__next {
+    display: none;
+  }
 }
 
 @media (max-width: 440px) {
