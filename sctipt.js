@@ -53,7 +53,7 @@ function startTimer(endTime) {
 
     if (timeLeft <= 0) {
       timer.innerHTML =
-        '<span style="color: black; font-size: 30px; font-famaly:Montserrat">Акция завершена</span>';
+        '<span style="color: black; font-size: 50px; font-famaly:Montserrat";white-space:nowrap>Акция завершена</span>';
       hoursElement.textContent = "00";
       minutesElement.textContent = "00";
       secondsElement.textContent = "00";
