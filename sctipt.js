@@ -42,7 +42,10 @@ function startTimer(endTime) {
   const minutesElement = document.querySelector(".minuts");
   const secondsElement = document.querySelector(".seconds");
   const timer = document.querySelector(".timer");
-  timer.style.fontSize = "63px";
+  timer.style.fontSize = "70px";
+  timer.style.fontSize = "Montserrat";
+  timer.style.whiteSpace = "Nowrap";
+  timer.style.fontWeight = "400";
 
   function updateTimer() {
     const now = new Date();
@@ -50,7 +53,7 @@ function startTimer(endTime) {
 
     if (timeLeft <= 0) {
       timer.innerHTML =
-        '<span style="color: black; font-size: 30px;">Акция завершена</span>';
+        '<span style="color: black; font-size: 30px; font-famaly:Montserrat">Акция завершена</span>';
       hoursElement.textContent = "00";
       minutesElement.textContent = "00";
       secondsElement.textContent = "00";
