@@ -24,7 +24,6 @@ function counts() {
   if (!localStorage.getItem("getFirstVizitTime")) {
     const timeFirstVizit = new Date();
     localStorage.setItem("getFirstVizitTime", timeFirstVizit.toString());
-    console.log("сохранено первое посещение:", timeFirstVizit);
 
     const endTimeSale = new Date(timeFirstVizit.getTime() + 5 * 60 * 60 * 1000);
     localStorage.setItem("dataSale", endTimeSale.toString());
@@ -33,8 +32,6 @@ function counts() {
   } else {
     const savedTime = localStorage.getItem("dataSale");
     const endTimeSale = new Date(savedTime);
-    console.log("время сохранено:", localStorage.getItem("getFirstVizitTime"));
-    console.log("время окончания акции", localStorage.getItem("dataSale"));
 
     startTimer(endTimeSale);
   }
@@ -57,7 +54,7 @@ function startTimer(endTime) {
       hoursElement.textContent = "00";
       minutesElement.textContent = "00";
       secondsElement.textContent = "00";
-      console.log("Акция завершена!");
+
       clearInterval(timerInterval);
       return;
     }
@@ -71,10 +68,6 @@ function startTimer(endTime) {
     hoursElement.textContent = hoursValue.toString().padStart(2, "0");
     minutesElement.textContent = minutesValue.toString().padStart(2, "0");
     secondsElement.textContent = secondsValue.toString().padStart(2, "0");
-
-    console.log(
-      `До конца акции: ${hoursValue}ч ${minutesValue}м ${secondsValue}с`
-    );
   }
 
   updateTimer();
