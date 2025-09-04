@@ -4,8 +4,6 @@ const btnBurger = document.querySelector(".header__burger");
 const burgerSlide = document.querySelector(".burger__slide");
 const closeBurger = document.querySelector(".close__burger");
 const body = document.body;
-let date = new Date("aug 26 2025 8:00:00");
-const firstVizitTime = localStorage.getItem("firstVizit");
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
@@ -21,11 +19,11 @@ btnBurger.addEventListener("click", toggleBurgerMenu);
 closeBurger.addEventListener("click", toggleBurgerMenu);
 
 function counts() {
-  if (!localStorage.getItem("getFirstVizitTime")) {
-    const timeFirstVizit = new Date();
-    localStorage.setItem("getFirstVizitTime", timeFirstVizit.toString());
+  if (!localStorage.getItem("getFirstVisitTime")) {
+    const timeFirstVisit = new Date();
+    localStorage.setItem("getFirstVisitTime", timeFirstVisit.toString());
 
-    const endTimeSale = new Date(timeFirstVizit.getTime() + 5 * 60 * 60 * 1000);
+    const endTimeSale = new Date(timeFirstVisit.getTime() + 5 * 60 * 60 * 1000);
     localStorage.setItem("dataSale", endTimeSale.toString());
 
     startTimer(endTimeSale);
