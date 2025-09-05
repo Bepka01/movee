@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function checkPhone() {
       inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
       if (inputPhone.value.length === 0 || inputPhone.value.length > 30) {
-        alert("Долбаеб веди нормельный номер");
+        alert("Неправильно");
         inputPhone.style.borderColor = "red";
       } else {
         inputPhone.style.borderColor = "";
