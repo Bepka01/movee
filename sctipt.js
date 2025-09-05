@@ -171,31 +171,30 @@ document.addEventListener("DOMContentLoaded", function () {
       btnPrev.classList.remove("disabled");
     }
   }
+
   btnForm.addEventListener("click", function (event) {
     event.preventDefault();
 
     function checkName() {
-      inputName.value = inputName.value.replace(/^[a-zA-Zа-яА-ЯёЁ\s]+$/);
+      inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-      if (
-        inputName.value.length === 0 ||
-        inputName.value.length > 20 ||
-        !nameRegex.test(inputName.value)
-      ) {
-        alert("Пожалуйста, введите имя только буквами (не более 20 символов)");
+      if (inputName.value.length === 0 || inputName.value.length > 30) {
+        alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
         inputName.style.borderColor = "red";
       } else {
         inputName.style.borderColor = "";
       }
+      return;
     }
     function checkPhone() {
       inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
       if (inputPhone.value.length === 0 || inputPhone.value.length > 30) {
-        alert("Неправильно");
+        alert("Неправильно введен номер телефона");
         inputPhone.style.borderColor = "red";
       } else {
         inputPhone.style.borderColor = "";
       }
+      return;
     }
     checkPhone();
     checkName();
