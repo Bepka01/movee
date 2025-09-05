@@ -4,6 +4,10 @@ const btnBurger = document.querySelector(".header__burger");
 const burgerSlide = document.querySelector(".burger__slide");
 const closeBurger = document.querySelector(".close__burger");
 const body = document.body;
+const btnForm = document.querySelector(".order__button");
+const form = document.querySelector(".form");
+const inputName = document.querySelector(".input__name");
+const inputPhone = document.querySelector(".input__phone");
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
@@ -167,4 +171,33 @@ document.addEventListener("DOMContentLoaded", function () {
       btnPrev.classList.remove("disabled");
     }
   }
+  btnForm.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    function checkName() {
+      inputName.value = inputName.value.replace(/^[a-zA-Zа-яА-ЯёЁ\s]+$/);
+
+      if (
+        inputName.value.length === 0 ||
+        inputName.value.length > 20 ||
+        !nameRegex.test(inputName.value)
+      ) {
+        alert("Пожалуйста, введите имя только буквами (не более 20 символов)");
+        inputName.style.borderColor = "red";
+      } else {
+        inputName.style.borderColor = "";
+      }
+    }
+    function checkPhone() {
+      inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
+      if (inputPhone.value.length === 0 || inputPhone.value.length > 30) {
+        alert("Долбаеб веди нормельный номер");
+        inputPhone.style.borderColor = "red";
+      } else {
+        inputPhone.style.borderColor = "";
+      }
+    }
+    checkPhone();
+    checkName();
+  });
 });
