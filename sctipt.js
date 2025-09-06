@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function checkName() {
       inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-      if (inputName.value.length === 0 || inputName.value.length > 30) {
+      if (inputName.value.length < 5 || inputName.value.length > 30) {
         alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
         inputName.style.borderColor = "red";
       } else {
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function checkPhone() {
       inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-      if (inputPhone.value.length === 0 || inputPhone.value.length > 30) {
+      if (inputPhone.value.length < 5 || inputPhone.value.length > 30) {
         alert("Неправильно введен номер телефона");
         inputPhone.style.borderColor = "red";
       } else {
