@@ -5,6 +5,7 @@ const burgerSlide = document.querySelector(".burger__slide");
 const closeBurger = document.querySelector(".close__burger");
 const body = document.body;
 const btnForm = document.querySelector(".order__button");
+const btnFormMobile = document.querySelector(".order__mobile-btn");
 const form = document.querySelector(".form");
 const inputName = document.querySelector(".input__name");
 const inputPhone = document.querySelector(".input__phone");
@@ -175,28 +176,48 @@ document.addEventListener("DOMContentLoaded", function () {
   btnForm.addEventListener("click", function (event) {
     event.preventDefault();
 
-    function checkName() {
-      inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
+    const isNameValid = checkName();
+    const isPhoneValid = checkPhone();
 
-      if (inputName.value.length < 5 || inputName.value.length > 30) {
-        alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
-        inputName.style.borderColor = "red";
-      } else {
-        inputName.style.borderColor = "";
-      }
-      return;
+    if (isNameValid && isPhoneValid) {
+      inputName.value = "";
+      inputPhone.value = "";
+      alert("Успешно");
     }
-    function checkPhone() {
-      inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-      if (inputPhone.value.length < 5 || inputPhone.value.length > 30) {
-        alert("Неправильно введен номер телефона");
-        inputPhone.style.borderColor = "red";
-      } else {
-        inputPhone.style.borderColor = "";
-      }
-      return;
-    }
-    checkPhone();
-    checkName();
   });
+  btnFormMobile.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const trueValidName = checkName();
+    const trueValidPhone = checkPhone();
+
+    if (trueValidName && trueValidPhone) {
+      inputName.value = "";
+      inputPhone.value = "";
+      alert("Успешно");
+    }
+  });
+  function checkName() {
+    inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
+
+    if (inputName.value.length < 5 || inputName.value.length > 30) {
+      alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
+      inputName.style.borderColor = "red";
+      return;
+    } else {
+      inputName.style.borderColor = "";
+      return true;
+    }
+  }
+  function checkPhone() {
+    inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
+    if (inputPhone.value.length < 5 || inputPhone.value.length > 30) {
+      alert("Неправильно введен номер телефона");
+      inputPhone.style.borderColor = "red";
+      return;
+    } else {
+      inputPhone.style.borderColor = "";
+      return true;
+    }
+  }
 });
