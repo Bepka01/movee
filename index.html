@@ -377,11 +377,21 @@
       <h3 class="title__order">Закажи переезд прямо сейчас со скидкой %</h3>
       <p class="subtitle__order">Мы перезвоним в течении 10 секунд</p>
       <div class="wrapper__input-user-info">
-        <label>
-          <input type="text" name="user__name" placeholder="Ваше имя" />
+        <label class="form">
+          <input
+            class="input name"
+            type="text"
+            name="user__name"
+            placeholder="Ваше имя"
+          />
         </label>
         <label>
-          <input type="tel" name="user__tel" placeholder="Телефон" />
+          <input
+            class="input phone"
+            type="tel"
+            name="user__tel"
+            placeholder="Телефон"
+          />
         </label>
       </div>
       <div class="wrapper__order-about-city">
@@ -498,12 +508,12 @@
         <div class="timer">
           <span class="hours">05</span>
           :
-          <span class="minutes">28</span>
+          <span class="minuts">28</span>
           :
           <span class="seconds">39</span>
         </div>
         <div class="wrapper__order-btn">
-          <button class="order__button">Заказать</button>
+          <button type="submit" class="order__button">Заказать</button>
           <div class="order-border"></div>
           <label class="checkbox-label">
             <input class="check__input-btn" type="checkbox" />
