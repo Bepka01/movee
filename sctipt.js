@@ -188,10 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
   btnFormMobile.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const trueValidName = checkName();
-    const trueValidPhone = checkPhone();
+    const isValidName = checkName();
+    const isValidPhone = checkPhone();
 
-    if (trueValidName && trueValidPhone) {
+    if (isValidName && isValidPhone) {
       inputName.value = "";
       inputPhone.value = "";
       alert("Успешно");
@@ -200,9 +200,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkName() {
     inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-    if (inputName.value.length < 5 || inputName.value.length > 30) {
+    if (inputName.value.length < 2 || inputName.value.length > 30) {
       alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
-      inputName.style.borderColor = "red";
+      inputName.style.borderColor = "#ff352b";
       return;
     } else {
       inputName.style.borderColor = "";
@@ -211,9 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function checkPhone() {
     inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-    if (inputPhone.value.length < 5 || inputPhone.value.length > 30) {
+    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
       alert("Неправильно введен номер телефона");
-      inputPhone.style.borderColor = "red";
+      inputPhone.style.borderColor = "#ff352b";
       return;
     } else {
       inputPhone.style.borderColor = "";
