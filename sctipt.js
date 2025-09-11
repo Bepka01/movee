@@ -9,6 +9,9 @@ const btnFormMobile = document.querySelector(".order__mobile-btn");
 const form = document.querySelector(".form");
 const inputName = document.querySelector(".input__name");
 const inputPhone = document.querySelector(".input__phone");
+const TOKEN = "8352568984:AAFtqzsfw3Tc5K02uvRZZ2BRsoUxI7AZuW8";
+const chatID = "-4894638683";
+const urlAPI = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
@@ -176,12 +179,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkName() {
     inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
+    if (inputName.value.length < 2 || inputPhone.value.length > 30) {
       alert("Неправильно введено имя");
-      inputPhone.style.borderColor = "#ff352b";
+      inputName.style.borderColor = "#ff352b";
       return;
     } else {
-      inputPhone.style.borderColor = "";
+      inputName.style.borderColor = "";
       return true;
     }
   }
