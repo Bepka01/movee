@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
     if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
-      alert("Неправильно введен номер телефона");
+      alert("Неправильно введено имя");
       inputPhone.style.borderColor = "#ff352b";
       return;
     } else {
