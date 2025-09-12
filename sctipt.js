@@ -9,6 +9,9 @@ const btnFormMobile = document.querySelector(".order__mobile-btn");
 const form = document.querySelector(".form");
 const inputName = document.querySelector(".input__name");
 const inputPhone = document.querySelector(".input__phone");
+const TOKEN = "8352568984:AAFtqzsfw3Tc5K02uvRZZ2BRsoUxI7AZuW8";
+const chatID = "-4894638683";
+const urlAPI = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
@@ -173,6 +176,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function checkName() {
+    inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
+
+    if (inputName.value.length < 2 || inputName.value.length > 30) {
+      alert("Неправильно введено имя");
+      inputName.style.borderColor = "#ff352b";
+      return false;
+    } else {
+      inputName.style.borderColor = "";
+      return true;
+    }
+  }
+
+  function checkPhone() {
+    inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
+    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
+      alert("Неправильно введен номер телефона");
+      inputPhone.style.borderColor = "#ff352b";
+      return false;
+    } else {
+      inputPhone.style.borderColor = "";
+      return true;
+    }
+  }
+
   btnForm.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -180,44 +208,85 @@ document.addEventListener("DOMContentLoaded", function () {
     const isPhoneValid = checkPhone();
 
     if (isNameValid && isPhoneValid) {
-      inputName.value = "";
-      inputPhone.value = "";
-      alert("Успешно");
+      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+
+      axios
+        .post(urlAPI, {
+          chat_id: chatID,
+          parse_mode: "html",
+          text: message,
+        })
+        .then((res) => {
+          console.log("Отправлено");
+
+          inputName.value = "";
+          inputPhone.value = "";
+          alert("Успешно!");
+        })
+        .catch((err) => {
+          console.log("Не отправлено");
+          alert("Ошибка отправки. Попробуйте еще раз.");
+        });
     }
   });
+
   btnFormMobile.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const isValidName = checkName();
-    const isValidPhone = checkPhone();
+    const isNameValid = checkName();
+    const isPhoneValid = checkPhone();
 
-    if (isValidName && isValidPhone) {
-      inputName.value = "";
-      inputPhone.value = "";
-      alert("Успешно");
+    if (isNameValid && isPhoneValid) {
+      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+
+      axios
+        .post(urlAPI, {
+          chat_id: chatID,
+          parse_mode: "html",
+          text: message,
+        })
+        .then((res) => {
+          console.log("Отправлено");
+
+          inputName.value = "";
+          inputPhone.value = "";
+          alert("Успешно!");
+        })
+        .catch((err) => {
+          console.log("Не отправлено");
+          alert("Ошибка отправки. Попробуйте еще раз.");
+        });
     }
   });
-  function checkName() {
-    inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-    if (inputName.value.length < 2 || inputName.value.length > 30) {
-      alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
-      inputName.style.borderColor = "#ff352b";
-      return;
-    } else {
-      inputName.style.borderColor = "";
-      return true;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const isNameValid = checkName();
+    const isPhoneValid = checkPhone();
+
+    if (isNameValid && isPhoneValid) {
+      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+
+      axios
+        .post(urlAPI, {
+          chat_id: chatID,
+          parse_mode: "html",
+          text: message,
+        })
+        .then((res) => {
+          console.log("Отправлено");
+          inputName.value = "";
+          inputPhone.value = "";
+          alert("Успешно!");
+        })
+        .catch((err) => {
+          console.log("Не отправлено");
+          alert("Ошибка отправки. Попробуйте еще раз.");
+        })
+        .finally(() => {
+          console.log("хз");
+        });
     }
-  }
-  function checkPhone() {
-    inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
-      alert("Неправильно введен номер телефона");
-      inputPhone.style.borderColor = "#ff352b";
-      return;
-    } else {
-      inputPhone.style.borderColor = "";
-      return true;
-    }
-  }
+  });
 });
