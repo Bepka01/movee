@@ -175,11 +175,18 @@ document.addEventListener("DOMContentLoaded", function () {
       btnPrev.classList.remove("disabled");
     }
   }
-
   function checkName() {
     inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 
-    if (inputName.value.length < 2 || inputName.value.length > 30) {
+    const trimmedValue = inputName.value.trim();
+
+    if (trimmedValue.length === 0 || /^\s+$/.test(inputName.value)) {
+      alert("Используйте буквы");
+      inputName.style.borderColor = "#ff352b";
+      return false;
+    }
+
+    if (trimmedValue.length < 2 || trimmedValue.length > 30) {
       alert("Неправильно введено имя");
       inputName.style.borderColor = "#ff352b";
       return false;
@@ -191,7 +198,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkPhone() {
     inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
+
+    const trimmedValue = inputPhone.value.trim();
+
+    if (trimmedValue.length === 0 || /^\s+$/.test(inputPhone.value)) {
+      alert("Номер телефона не может состоять только из пробелов");
+      inputPhone.style.borderColor = "#ff352b";
+      return false;
+    }
+
+    if (trimmedValue.length < 2 || trimmedValue.length > 30) {
       alert("Неправильно введен номер телефона");
       inputPhone.style.borderColor = "#ff352b";
       return false;
@@ -201,6 +217,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function sendData(message) {
+    return fetch(urlAPI, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatID,
+        parse_mode: "html",
+        text: message,
+      }),
+    });
+  }
+
   btnForm.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -208,17 +238,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const isPhoneValid = checkPhone();
 
     if (isNameValid && isPhoneValid) {
-      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+      let message = `ЗАЯВКА\nИмя: ${inputName.value.trim()}\nНомер телефона: ${inputPhone.value.trim()}`;
 
-      axios
-        .post(urlAPI, {
-          chat_id: chatID,
-          parse_mode: "html",
-          text: message,
+      sendData(message)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Ошибка сети");
+          }
+          return response.json();
         })
-        .then((res) => {
+        .then((data) => {
           console.log("Отправлено");
-
           inputName.value = "";
           inputPhone.value = "";
           alert("Успешно!");
@@ -237,17 +267,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const isPhoneValid = checkPhone();
 
     if (isNameValid && isPhoneValid) {
-      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+      let message = `ЗАЯВКА\nИмя: ${inputName.value.trim()}\nНомер телефона: ${inputPhone.value.trim()}`;
 
-      axios
-        .post(urlAPI, {
-          chat_id: chatID,
-          parse_mode: "html",
-          text: message,
+      sendData(message)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Ошибка сети");
+          }
+          return response.json();
         })
-        .then((res) => {
+        .then((data) => {
           console.log("Отправлено");
-
           inputName.value = "";
           inputPhone.value = "";
           alert("Успешно!");
@@ -266,15 +296,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const isPhoneValid = checkPhone();
 
     if (isNameValid && isPhoneValid) {
-      let message = `ЗАЯВКА\nИмя: ${inputName.value}\nНомер телефона: ${inputPhone.value}`;
+      let message = `ЗАЯВКА\nИмя: ${inputName.value.trim()}\nНомер телефона: ${inputPhone.value.trim()}`;
 
-      axios
-        .post(urlAPI, {
-          chat_id: chatID,
-          parse_mode: "html",
-          text: message,
+      sendData(message)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Ошибка сети");
+          }
+          return response.json();
         })
-        .then((res) => {
+        .then((data) => {
           console.log("Отправлено");
           inputName.value = "";
           inputPhone.value = "";
@@ -283,9 +314,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((err) => {
           console.log("Не отправлено");
           alert("Ошибка отправки. Попробуйте еще раз.");
-        })
-        .finally(() => {
-          console.log("хз");
         });
     }
   });
