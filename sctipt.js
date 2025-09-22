@@ -243,13 +243,11 @@ document.addEventListener("DOMContentLoaded", function () {
           return response.json();
         })
         .then((data) => {
-          console.log("Отправлено");
           inputName.value = "";
           inputPhone.value = "";
           alert("Успешно!");
         })
         .catch((err) => {
-          console.log("Не отправлено");
           alert("Ошибка отправки. Попробуйте еще раз.");
         });
     }
