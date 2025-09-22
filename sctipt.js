@@ -9,6 +9,9 @@ const btnFormMobile = document.querySelector(".order__mobile-btn");
 const form = document.querySelector(".form");
 const inputName = document.querySelector(".input__name");
 const inputPhone = document.querySelector(".input__phone");
+const TOKEN = "8352568984:AAFtqzsfw3Tc5K02uvRZZ2BRsoUxI7AZuW8";
+const chatID = "-4894638683";
+const urlAPI = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 btn.addEventListener("click", function () {
   dropdown.classList.toggle("close");
@@ -172,52 +175,85 @@ document.addEventListener("DOMContentLoaded", function () {
       btnPrev.classList.remove("disabled");
     }
   }
+  function validateInput(input, regex, min, max, emptyMessage, lengthMessage) {
+    input.value = input.value.replace(regex, "");
+    const trimmedValue = input.value.trim();
 
-  btnForm.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const isNameValid = checkName();
-    const isPhoneValid = checkPhone();
-
-    if (isNameValid && isPhoneValid) {
-      inputName.value = "";
-      inputPhone.value = "";
-      alert("Успешно");
+    if (trimmedValue.length === 0 || /^\s+$/.test(input.value)) {
+      alert(emptyMessage);
+      input.style.borderColor = "#ff352b";
+      return false;
     }
-  });
-  btnFormMobile.addEventListener("click", function (event) {
-    event.preventDefault();
 
-    const isValidName = checkName();
-    const isValidPhone = checkPhone();
-
-    if (isValidName && isValidPhone) {
-      inputName.value = "";
-      inputPhone.value = "";
-      alert("Успешно");
+    if (trimmedValue.length < min || trimmedValue.length > max) {
+      alert(lengthMessage);
+      input.style.borderColor = "#ff352b";
+      return false;
     }
-  });
+
+    input.style.borderColor = "";
+    return true;
+  }
+
   function checkName() {
-    inputName.value = inputName.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
+    return validateInput(
+      inputName,
+      /[^a-zA-Zа-яА-ЯёЁ\s]/g,
+      2,
+      30,
+      "Используйте буквы",
+      "Неправильно введено имя"
+    );
+  }
 
-    if (inputName.value.length < 2 || inputName.value.length > 30) {
-      alert("Пожалуйста, введите имя только буквами (не более 30 символов)");
-      inputName.style.borderColor = "#ff352b";
-      return;
-    } else {
-      inputName.style.borderColor = "";
-      return true;
-    }
-  }
   function checkPhone() {
-    inputPhone.value = inputPhone.value.replace(/[^0-9+()\s]/g, "");
-    if (inputPhone.value.length < 2 || inputPhone.value.length > 30) {
-      alert("Неправильно введен номер телефона");
-      inputPhone.style.borderColor = "#ff352b";
-      return;
-    } else {
-      inputPhone.style.borderColor = "";
-      return true;
+    return validateInput(
+      inputPhone,
+      /[^0-9+()\s]/g,
+      2,
+      30,
+      "Номер телефона не может состоять только из пробелов",
+      "Неправильно введен номер телефона"
+    );
+  }
+
+  function sendData(message) {
+    return fetch(urlAPI, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatID,
+        parse_mode: "html",
+        text: message,
+      }),
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (checkName() && checkPhone()) {
+      const message = `ЗАЯВКА\nИмя: ${inputName.value.trim()}\nНомер телефона: ${inputPhone.value.trim()}`;
+
+      sendData(message)
+        .then((response) => {
+          if (!response.ok) throw new Error("Ошибка сети");
+          return response.json();
+        })
+        .then((data) => {
+          inputName.value = "";
+          inputPhone.value = "";
+          alert("Успешно!");
+        })
+        .catch((err) => {
+          alert("Ошибка отправки. Попробуйте еще раз.");
+        });
     }
   }
+
+  btnForm.addEventListener("click", handleSubmit);
+  btnFormMobile.addEventListener("click", handleSubmit);
+  form.addEventListener("submit", handleSubmit);
 });
